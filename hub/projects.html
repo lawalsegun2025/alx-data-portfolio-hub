@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore Projects — ALX Data Portfolio Hub</title>
+  <meta name="description" content="Browse and filter real-world portfolio projects for ALX Data Analytics learners. Filter by course, domain, difficulty, and skills." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-badge">ALX</span>
+      <span class="nav-logo-text">Data Portfolio Hub</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="projects.html" class="active">Explore Projects</a></li>
+      <li><a href="how-it-works.html">How It Works</a></li>
+      <li><a href="github-guide.html">GitHub Guide</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html" class="nav-cta">Browse Projects →</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <h1>Explore Projects</h1>
+  <p>Browse real-world portfolio projects across 15+ industries. Filter by course, domain, difficulty, and skills to find the right project for your career goals.</p>
+</div>
+
+<section class="section-sm">
+  <div class="container">
+
+    <div class="filters-bar">
+      <div class="filter-group" style="flex:2; min-width:200px;">
+        <label for="filter-search">Search</label>
+        <input type="text" id="filter-search" placeholder="Search by title, skill, or keyword…" />
+      </div>
+      <div class="filter-group">
+        <label for="filter-course">Course</label>
+        <select id="filter-course"><option value="">All Courses</option></select>
+      </div>
+      <div class="filter-group">
+        <label for="filter-domain">Domain</label>
+        <select id="filter-domain"><option value="">All Domains</option></select>
+      </div>
+      <div class="filter-group">
+        <label for="filter-diff">Difficulty</label>
+        <select id="filter-diff"><option value="">All Levels</option></select>
+      </div>
+      <span class="filter-reset" id="filter-reset">✕ Reset</span>
+    </div>
+
+    <div class="results-count" id="results-count"></div>
+    <div class="projects-grid" id="projects-grid"></div>
+    <div class="no-results" id="no-results">
+      <h3>No projects match your filters.</h3>
+      <p>Try broadening your search or resetting the filters.</p>
+      <button class="btn btn-outline btn-sm mt-16" id="reset-btn-2">Reset Filters</button>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo-text">ALX Data Portfolio Hub</div>
+      <p>Real-world portfolio projects for ALX Data Analytics learners.</p>
+      <div style="font-size:0.8rem;color:rgba(255,255,255,0.4);">A Technical Mentorship Pilot Initiative</div>
+    </div>
+    <div class="footer-col"><h5>Projects</h5><ul>
+      <li><a href="projects.html?course=DA-2">Google Sheets</a></li>
+      <li><a href="projects.html?course=DA-3">MySQL</a></li>
+      <li><a href="projects.html?course=DA-4">Power BI</a></li>
+      <li><a href="projects.html?course=Capstone">Capstone</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Guides</h5><ul>
+      <li><a href="how-it-works.html">How It Works</a></li>
+      <li><a href="responsible-ai.html">Responsible AI</a></li>
+      <li><a href="github-guide.html">GitHub Guide</a></li>
+      <li><a href="linkedin-guide.html">LinkedIn Guide</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Info</h5><ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+      <li><a href="https://www.alxafrica.com" target="_blank">ALX Africa ↗</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 ALX Data Programs — Technical Mentorship. Pilot prototype.</span>
+  </div>
+</footer>
+
+<script src="js/projects-data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/projects.js"></script>
+<script>
+  document.getElementById('reset-btn-2')?.addEventListener('click', () => {
+    document.getElementById('filter-reset').click();
+  });
+</script>
+</body>
+</html>
