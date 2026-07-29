@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healthcare Facility Performance Tracker — ALX Data Portfolio Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <span class="nav-logo-badge">ALX</span>
+      <span class="nav-logo-text">Data Portfolio Hub</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../projects.html" class="active">Explore Projects</a></li>
+      <li><a href="../how-it-works.html">How It Works</a></li>
+      <li><a href="../github-guide.html">GitHub Guide</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../projects.html" class="nav-cta">Browse Projects →</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="../index.html">Home</a>
+    <span>›</span>
+    <a href="../projects.html">Projects</a>
+    <span>›</span>
+    <span>Healthcare Facility Performance Tracker</span>
+  </div>
+</div>
+
+<div class="project-header">
+  <div class="container">
+    <div class="project-meta-row">
+      <span class="meta-badge">📊 DA-2: Google Sheets</span>
+      <span class="meta-badge">🏥 Healthcare</span>
+      <span class="meta-badge">⚡ Beginner</span>
+      <span class="meta-badge">⏱ 6–10 hrs</span>
+    </div>
+    <h1>Healthcare Facility Performance Tracker</h1>
+    <div class="project-meta-row" style="margin-top:16px;">
+      <span class="meta-badge">📊 Google Sheets</span>
+      <span class="meta-badge">✓ Real-World Data</span>
+    </div>
+  </div>
+</div>
+
+<div class="project-body">
+
+  <div class="project-section">
+    <h2>Business Challenge</h2>
+    
+    <p>You have been engaged as a data analyst by a regional health ministry that oversees outpatient care across a network of public health facilities in several African countries. Leadership has noticed wide variation in patient volumes and service delivery between facilities, but has no consolidated view of what's actually happening on the ground.</p>
+    <p>Your task is to build a clean, structured performance tracker in Google Sheets that gives programme managers a clear picture of facility-level activity, and to surface the two or three facilities that most urgently need attention.</p>
+    
+  </div>
+
+  <div class="project-section">
+    <h2>Background</h2>
+    
+    <p>Outpatient facility data across public health systems is often scattered, inconsistently formatted, and difficult to compare facility-to-facility. Before any meaningful analysis can happen, a data analyst has to standardise the data and design a structure that non-technical stakeholders can actually read.</p>
+    <p>This project simulates the kind of first-pass analytics work a data analyst would do for a ministry of health or health-focused NGO — turning a raw facility export into something a programme director can open and understand in five minutes.</p>
+    
+  </div>
+
+  <div class="project-section">
+    <h2>Project Objective</h2>
+    <p>Build a facility performance tracker in Google Sheets that consolidates outpatient activity data, surfaces performance gaps between facilities, and gives programme managers a clear, actionable view for resource planning.</p>
+  </div>
+
+  <div class="project-section">
+    <h2>Learning Objectives</h2>
+    <p>By completing this project you will demonstrate the ability to:</p>
+    <ul>
+      <li>Clean and standardise messy real-world health facility data</li>
+      <li>Design pivot tables to summarise activity by facility, region, and time period</li>
+      <li>Build charts that make facility comparisons immediately clear to a non-technical reader</li>
+      <li>Use spreadsheet functions to calculate performance indicators from raw records</li>
+      <li>Communicate facility-level findings in a way a programme manager can act on</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Dataset Information</h2>
+    <div class="dataset-box">
+      <table>
+        <tr><td>Dataset Name</td><td>Global Health Observatory — Health Service Coverage Data</td></tr>
+        <tr><td>Publisher</td><td>World Health Organization (WHO)</td></tr>
+        <tr><td>Description</td><td>Facility and country-level indicators covering outpatient visits, service coverage, and health workforce data across WHO member states</td></tr>
+        <tr><td>File Format</td><td>CSV / XLSX (exportable from GHO OData API or data portal)</td></tr>
+        <tr><td>Approximate Size</td><td>~5–15MB depending on indicator selection</td></tr>
+        <tr><td>Licence</td><td>Public — WHO open data terms (attribution required, check GHO site for latest terms)</td></tr>
+        <tr><td>Download Link</td><td><a href="https://www.who.int/data/gho" target="_blank">who.int — Global Health Observatory ↗</a></td></tr>
+        <tr><td>Access</td><td>Free to access. Use the GHO OData API or download indicator tables directly from the data portal — no account required.</td></tr>
+        <tr><td>Known Limitations</td><td>GHO data is aggregated at country/regional level rather than individual facility level. Treat regions or reporting units as your 'facilities' for the purposes of this exercise, and note this substitution clearly in your README.</td></tr>
+        <tr><td>Last Verified</td><td>July 2026</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Project Tasks</h2>
+
+    <h3>Stage 1 — Data Cleaning &amp; Preparation</h3>
+    <ul>
+      <li>Import the raw indicator export and audit for missing values, inconsistent region names, and duplicate rows</li>
+      <li>Standardise date periods, region/facility naming, and indicator units</li>
+      <li>Document every cleaning decision in a separate log tab</li>
+      <li>Calculate derived columns: period-over-period change, per-capita visit rate where population data is available</li>
+    </ul>
+
+    <h3>Stage 2 — Analysis</h3>
+    <ul>
+      <li>Build pivot tables summarising outpatient activity by region and time period</li>
+      <li>Identify the regions/facilities with the highest and lowest visit volumes</li>
+      <li>Calculate a simple performance index combining volume trend and service coverage</li>
+      <li>Flag the two or three lowest-performing units for deeper review</li>
+    </ul>
+
+    <h3>Stage 3 — Visualisation &amp; Reporting</h3>
+    <ul>
+      <li>Build a dashboard tab with summary charts: activity trend over time, regional comparison bar chart, and a performance index ranking</li>
+      <li>Apply clear, consistent formatting so a non-technical reader can interpret it without explanation</li>
+      <li>Write a one-page summary of findings and a recommended next step for the ministry</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Expected Deliverables</h2>
+    <ul>
+      <li>Google Sheets workbook: raw data tab, cleaning log tab, pivot tables, and dashboard tab</li>
+      <li>Summary write-up (in-sheet or separate doc, 1 page) highlighting key findings</li>
+      <li>GitHub repository with an exported copy of the workbook and a completed README</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Assessment Rubric</h2>
+    <table class="rubric-table">
+      <thead><tr><th>Criterion</th><th>What Good Looks Like</th><th>Weight</th></tr></thead>
+      <tbody>
+        <tr><td>Data Cleaning</td><td>Missing values and inconsistencies identified and resolved; decisions documented</td><td>25%</td></tr>
+        <tr><td>Pivot Table Design</td><td>Tables correctly summarise activity by the right dimensions</td><td>20%</td></tr>
+        <tr><td>Formula Accuracy</td><td>Derived columns and performance index calculate correctly</td><td>15%</td></tr>
+        <tr><td>Chart Clarity</td><td>Charts are readable, correctly labelled, and support the findings</td><td>20%</td></tr>
+        <tr><td>Insight Quality</td><td>Findings are specific and go beyond restating the numbers</td><td>10%</td></tr>
+        <tr><td>Documentation</td><td>README is complete and repository is well-organised</td><td>10%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="project-section">
+    <h2>Stretch Challenge</h2>
+    <div class="stretch-box">
+      <p><strong>For learners who want to go further:</strong></p>
+      <ul>
+      <li>Add a weighted scoring formula that combines multiple indicators into a single facility performance score</li>
+      <li>Build a simple traffic-light conditional formatting system to flag underperforming regions at a glance</li>
+      <li>Write a short reflection on what additional data (e.g. staffing levels, budget) would improve the analysis</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Responsible AI Guidance</h2>
+    <div class="ai-box">
+      <p><strong>You may use AI to:</strong> explain concepts, debug formulas, check your writing clarity, and brainstorm analytical questions.</p>
+      <p style="margin-top:8px;"><strong>You may not use AI to:</strong> generate the analysis, write your recommendations, or produce your report for you. Your interpretations and conclusions must be your own.</p>
+      <p style="margin-top:8px;">If you use AI assistance significantly at any stage, note it briefly in your README. Employers value honesty about tooling — what matters is that the thinking and judgement are yours.</p>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Reflection Questions</h2>
+    <div class="reflection-box">
+      <p>Include written answers to at least three of these in your README or a separate reflection document:</p>
+      <ul>
+      <li>What was the most significant data quality issue you encountered, and how did you resolve it?</li>
+      <li>How did you decide which indicator best represented 'performance'?</li>
+      <li>What story does your dashboard tell that a table of numbers would not?</li>
+      <li>If you were presenting this to a ministry director, what three sentences would you lead with?</li>
+      <li>What limitations of this dataset most affected the quality of your recommendations?</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>GitHub Portfolio Guidance</h2>
+    <p>Organise your repository as follows:</p>
+    <div class="code-block">healthcare-facility-performance-tracker/
+├── data/
+│   └── raw/           ← link to source, not the file itself
+├── sheets/
+│   └── healthcare-facility-performance-tracker.xlsx   ← exported copy of your Google Sheet
+├── images/
+│   └── chart_screenshots.png
+└── README.md</div>
+    <p style="margin-top:12px;">Your README should include: project title, business challenge, tools used, dataset source and link, key findings (3 bullet points), and screenshots of your key charts.</p>
+    <a href="../github-guide.html" class="btn btn-outline btn-sm mt-16">Full GitHub Guide →</a>
+  </div>
+
+  <div class="project-section">
+    <h2>LinkedIn Showcase Guidance</h2>
+    <p>When sharing this project on LinkedIn, use this structure:</p>
+    <ul>
+      <li><strong>Hook:</strong> Start with the business problem, not the tools ("A health ministry had no consolidated view of facility performance across its network…")</li>
+      <li><strong>What you did:</strong> Briefly describe your analytical approach in Google Sheets</li>
+      <li><strong>Key finding:</strong> Share one specific, concrete insight from the data</li>
+      <li><strong>Link:</strong> Include your GitHub repository link</li>
+      <li><strong>Tags:</strong> #DataAnalytics #GoogleSheets #ALXAfrica #HealthcareAnalytics #PortfolioProject</li>
+    </ul>
+    <a href="../linkedin-guide.html" class="btn btn-outline btn-sm mt-16">Full LinkedIn Guide →</a>
+  </div>
+
+  <div style="margin-top:48px; padding-top:32px; border-top:2px solid var(--border); display:flex; gap:14px; flex-wrap:wrap;">
+    <a href="../projects.html" class="btn btn-outline">← Back to All Projects</a>
+    <a href="../projects.html?course=DA-2" class="btn btn-dark">More Google Sheets Projects</a>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo-text">ALX Data Portfolio Hub</div>
+      <p>Real-world portfolio projects for ALX Data Analytics learners.</p>
+    </div>
+    <div class="footer-col"><h5>Projects</h5><ul>
+      <li><a href="../projects.html?course=DA-2">Google Sheets</a></li>
+      <li><a href="../projects.html?course=DA-3">MySQL</a></li>
+      <li><a href="../projects.html?course=DA-4">Power BI</a></li>
+      <li><a href="../projects.html?course=Capstone">Capstone</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Guides</h5><ul>
+      <li><a href="../how-it-works.html">How It Works</a></li>
+      <li><a href="../responsible-ai.html">Responsible AI</a></li>
+      <li><a href="../github-guide.html">GitHub Guide</a></li>
+      <li><a href="../linkedin-guide.html">LinkedIn Guide</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Info</h5><ul>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../feedback.html">Feedback</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 ALX Data Programs — Technical Mentorship. Pilot prototype.</span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

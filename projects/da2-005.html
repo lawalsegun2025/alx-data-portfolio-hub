@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Air Quality & Health Impact Report — ALX Data Portfolio Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <span class="nav-logo-badge">ALX</span>
+      <span class="nav-logo-text">Data Portfolio Hub</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../projects.html" class="active">Explore Projects</a></li>
+      <li><a href="../how-it-works.html">How It Works</a></li>
+      <li><a href="../github-guide.html">GitHub Guide</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../projects.html" class="nav-cta">Browse Projects →</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="../index.html">Home</a>
+    <span>›</span>
+    <a href="../projects.html">Projects</a>
+    <span>›</span>
+    <span>Air Quality & Health Impact Report</span>
+  </div>
+</div>
+
+<div class="project-header">
+  <div class="container">
+    <div class="project-meta-row">
+      <span class="meta-badge">📊 DA-2: Google Sheets</span>
+      <span class="meta-badge">🌍 Climate & Sustainability</span>
+      <span class="meta-badge">⚡ Intermediate</span>
+      <span class="meta-badge">⏱ 8–12 hrs</span>
+    </div>
+    <h1>Air Quality & Health Impact Report</h1>
+    <div class="project-meta-row" style="margin-top:16px;">
+      <span class="meta-badge">📊 Google Sheets</span>
+      <span class="meta-badge">✓ Real-World Data</span>
+    </div>
+  </div>
+</div>
+
+<div class="project-body">
+
+  <div class="project-section">
+    <h2>Business Challenge</h2>
+    
+    <p>You have been engaged as a data analyst by a public health research unit studying the health impact of urban air pollution across African cities. Leadership needs an evidence-based report identifying which cities have the most severe air quality problems, to support an upcoming policy brief.</p>
+    <p>Your task is to process WHO air quality monitoring data, assess pollution severity across cities, and evaluate the likely public health implications.</p>
+    
+  </div>
+
+  <div class="project-section">
+    <h2>Background</h2>
+    
+    <p>Urban air pollution is a growing public health concern across African cities, but monitoring data quality and coverage varies widely — some cities have dense monitoring networks, others rely on a single station. A rigorous analyst has to account for this before drawing conclusions about relative severity.</p>
+    <p>This project simulates the kind of evidence-gathering work a data analyst would do for a public health research team preparing a policy brief for government or donor audiences.</p>
+    
+  </div>
+
+  <div class="project-section">
+    <h2>Project Objective</h2>
+    <p>Process WHO air quality monitoring data to assess pollution severity across African cities and evaluate the public health implications for a policy audience.</p>
+  </div>
+
+  <div class="project-section">
+    <h2>Learning Objectives</h2>
+    <p>By completing this project you will demonstrate the ability to:</p>
+    <ul>
+      <li>Clean and structure environmental monitoring data with inconsistent coverage</li>
+      <li>Apply descriptive statistics to summarise pollutant concentration levels</li>
+      <li>Compare city-level readings against WHO air quality guideline thresholds</li>
+      <li>Apply basic hypothesis testing reasoning to assess whether observed differences are meaningful</li>
+      <li>Communicate technical air quality findings to a policy, not technical, audience</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Dataset Information</h2>
+    <div class="dataset-box">
+      <table>
+        <tr><td>Dataset Name</td><td>WHO Ambient Air Quality Database</td></tr>
+        <tr><td>Publisher</td><td>World Health Organization (WHO)</td></tr>
+        <tr><td>Description</td><td>City-level annual mean concentrations of key air pollutants (PM2.5, PM10, NO2) from ground monitoring stations worldwide</td></tr>
+        <tr><td>File Format</td><td>CSV / XLSX (downloadable from the WHO data portal)</td></tr>
+        <tr><td>Approximate Size</td><td>~10–20MB for the full database, smaller once filtered to African cities</td></tr>
+        <tr><td>Licence</td><td>Public — WHO open data terms</td></tr>
+        <tr><td>Download Link</td><td><a href="https://www.who.int/data/gho/data/themes/air-pollution" target="_blank">who.int — Ambient Air Quality ↗</a></td></tr>
+        <tr><td>Access</td><td>Free, no account required. Download the full database and filter to African cities using the region/country columns.</td></tr>
+        <tr><td>Known Limitations</td><td>Monitoring station density varies enormously by city — some readings represent a single station, others an average of many. Note this in your analysis rather than treating all readings as equally representative.</td></tr>
+        <tr><td>Last Verified</td><td>July 2026</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Project Tasks</h2>
+
+    <h3>Stage 1 — Data Cleaning &amp; Preparation</h3>
+    <ul>
+      <li>Import the raw WHO export and filter to African cities with available PM2.5/PM10 readings</li>
+      <li>Audit for missing years and flag cities with very limited monitoring station coverage</li>
+      <li>Standardise city and country naming</li>
+      <li>Calculate derived columns: multiple-of-WHO-guideline ratio for each pollutant reading</li>
+    </ul>
+
+    <h3>Stage 2 — Analysis</h3>
+    <ul>
+      <li>Use descriptive statistics (mean, median, range) to summarise pollution levels by city and region</li>
+      <li>Rank cities by severity relative to WHO guideline thresholds</li>
+      <li>Assess whether differences between the most and least polluted cities are large enough to be meaningful, not just noise from limited monitoring</li>
+    </ul>
+
+    <h3>Stage 3 — Visualisation &amp; Reporting</h3>
+    <ul>
+      <li>Build a dashboard tab with a city ranking chart and a guideline-threshold comparison visual</li>
+      <li>Highlight the cities with the most severe and most consistently under-monitored pollution levels</li>
+      <li>Write a short public-health-oriented summary suitable for inclusion in a policy brief</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Expected Deliverables</h2>
+    <ul>
+      <li>Google Sheets workbook: raw data tab, cleaning log tab, analysis tabs, and dashboard tab</li>
+      <li>Policy-ready summary (1 page) written for a non-technical audience</li>
+      <li>GitHub repository with an exported copy of the workbook and a completed README</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Assessment Rubric</h2>
+    <table class="rubric-table">
+      <thead><tr><th>Criterion</th><th>What Good Looks Like</th><th>Weight</th></tr></thead>
+      <tbody>
+        <tr><td>Data Cleaning</td><td>Missing data and monitoring coverage limitations correctly identified and documented</td><td>20%</td></tr>
+        <tr><td>Statistical Summary</td><td>Descriptive statistics are correctly calculated and appropriately interpreted</td><td>20%</td></tr>
+        <tr><td>Guideline Comparison</td><td>City rankings against WHO thresholds are accurate</td><td>20%</td></tr>
+        <tr><td>Chart Clarity</td><td>Dashboard clearly communicates severity and monitoring limitations</td><td>20%</td></tr>
+        <tr><td>Policy Communication</td><td>Summary is accurate, appropriately cautious, and accessible to a non-technical reader</td><td>10%</td></tr>
+        <tr><td>Documentation</td><td>README is complete and repository is well-organised</td><td>10%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="project-section">
+    <h2>Stretch Challenge</h2>
+    <div class="stretch-box">
+      <p><strong>For learners who want to go further:</strong></p>
+      <ul>
+      <li>Cross-reference pollution severity with population density data to estimate relative exposure burden</li>
+      <li>Build a simple year-over-year trend chart for the 3 most polluted cities with sufficient historical data</li>
+      <li>Write a reflection on how monitoring station sparsity could bias city rankings</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Responsible AI Guidance</h2>
+    <div class="ai-box">
+      <p><strong>You may use AI to:</strong> explain concepts, debug formulas, check your writing clarity, and brainstorm analytical questions.</p>
+      <p style="margin-top:8px;"><strong>You may not use AI to:</strong> generate the analysis, write your recommendations, or produce your report for you. Your interpretations and conclusions must be your own.</p>
+      <p style="margin-top:8px;">If you use AI assistance significantly at any stage, note it briefly in your README. Employers value honesty about tooling — what matters is that the thinking and judgement are yours.</p>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Reflection Questions</h2>
+    <div class="reflection-box">
+      <p>Include written answers to at least three of these in your README or a separate reflection document:</p>
+      <ul>
+      <li>How did you account for differences in monitoring station density between cities?</li>
+      <li>Which city's result most surprised you, and why?</li>
+      <li>What is the difference between 'more polluted' and 'more monitored', and how did you distinguish them in your analysis?</li>
+      <li>If you were briefing a health minister, what three sentences would you lead with?</li>
+      <li>What additional data would most strengthen the public health case in this report?</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>GitHub Portfolio Guidance</h2>
+    <p>Organise your repository as follows:</p>
+    <div class="code-block">air-quality-health-impact-report/
+├── data/
+│   └── raw/           ← link to source, not the file itself
+├── sheets/
+│   └── air-quality-health-impact-report.xlsx   ← exported copy of your Google Sheet
+├── images/
+│   └── chart_screenshots.png
+└── README.md</div>
+    <p style="margin-top:12px;">Your README should include: project title, business challenge, tools used, dataset source and link, key findings (3 bullet points), and screenshots of your key charts.</p>
+    <a href="../github-guide.html" class="btn btn-outline btn-sm mt-16">Full GitHub Guide →</a>
+  </div>
+
+  <div class="project-section">
+    <h2>LinkedIn Showcase Guidance</h2>
+    <p>When sharing this project on LinkedIn, use this structure:</p>
+    <ul>
+      <li><strong>Hook:</strong> Start with the business problem, not the tools ("A public health team needed evidence on exactly which African cities faced the most severe air quality problems…")</li>
+      <li><strong>What you did:</strong> Briefly describe your analytical approach in Google Sheets</li>
+      <li><strong>Key finding:</strong> Share one specific, concrete insight from the data</li>
+      <li><strong>Link:</strong> Include your GitHub repository link</li>
+      <li><strong>Tags:</strong> #DataAnalytics #GoogleSheets #ALXAfrica #PublicHealth #PortfolioProject</li>
+    </ul>
+    <a href="../linkedin-guide.html" class="btn btn-outline btn-sm mt-16">Full LinkedIn Guide →</a>
+  </div>
+
+  <div style="margin-top:48px; padding-top:32px; border-top:2px solid var(--border); display:flex; gap:14px; flex-wrap:wrap;">
+    <a href="../projects.html" class="btn btn-outline">← Back to All Projects</a>
+    <a href="../projects.html?course=DA-2" class="btn btn-dark">More Google Sheets Projects</a>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo-text">ALX Data Portfolio Hub</div>
+      <p>Real-world portfolio projects for ALX Data Analytics learners.</p>
+    </div>
+    <div class="footer-col"><h5>Projects</h5><ul>
+      <li><a href="../projects.html?course=DA-2">Google Sheets</a></li>
+      <li><a href="../projects.html?course=DA-3">MySQL</a></li>
+      <li><a href="../projects.html?course=DA-4">Power BI</a></li>
+      <li><a href="../projects.html?course=Capstone">Capstone</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Guides</h5><ul>
+      <li><a href="../how-it-works.html">How It Works</a></li>
+      <li><a href="../responsible-ai.html">Responsible AI</a></li>
+      <li><a href="../github-guide.html">GitHub Guide</a></li>
+      <li><a href="../linkedin-guide.html">LinkedIn Guide</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Info</h5><ul>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../feedback.html">Feedback</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 ALX Data Programs — Technical Mentorship. Pilot prototype.</span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

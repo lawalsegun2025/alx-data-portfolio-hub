@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Electricity Access & Energy Poverty — ALX Data Portfolio Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <span class="nav-logo-badge">ALX</span>
+      <span class="nav-logo-text">Data Portfolio Hub</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../projects.html" class="active">Explore Projects</a></li>
+      <li><a href="../how-it-works.html">How It Works</a></li>
+      <li><a href="../github-guide.html">GitHub Guide</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../projects.html" class="nav-cta">Browse Projects →</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="../index.html">Home</a>
+    <span>›</span>
+    <a href="../projects.html">Projects</a>
+    <span>›</span>
+    <span>Electricity Access & Energy Poverty</span>
+  </div>
+</div>
+
+<div class="project-header">
+  <div class="container">
+    <div class="project-meta-row">
+      <span class="meta-badge">📊 DA-2: Google Sheets</span>
+      <span class="meta-badge">⚡ Energy</span>
+      <span class="meta-badge">⚡ Beginner</span>
+      <span class="meta-badge">⏱ 6–8 hrs</span>
+    </div>
+    <h1>Electricity Access & Energy Poverty</h1>
+    <div class="project-meta-row" style="margin-top:16px;">
+      <span class="meta-badge">📊 Google Sheets</span>
+      <span class="meta-badge">✓ Real-World Data</span>
+    </div>
+  </div>
+</div>
+
+<div class="project-body">
+
+  <div class="project-section">
+    <h2>Business Challenge</h2>
+    
+    <p>You have been engaged as a data analyst by an energy access non-profit planning where to deploy off-grid solar programmes across Africa. Leadership needs to know precisely where electricity coverage gaps are largest — and how many people that actually represents — to prioritise the next deployment.</p>
+    <p>Your task is to use World Bank electricity access data to map coverage gaps across African countries and calculate the population living without reliable power.</p>
+    
+  </div>
+
+  <div class="project-section">
+    <h2>Background</h2>
+    
+    <p>Electricity access statistics are reported as percentages, which can obscure the real scale of the problem — a country with 60% coverage and a large population may have far more people without power than a country with 30% coverage and a small population. Turning coverage rates into absolute population figures is an essential step analysts often skip.</p>
+    <p>This project simulates the kind of prioritisation analysis a data analyst would do for an energy access NGO deciding where limited deployment resources should go first.</p>
+    
+  </div>
+
+  <div class="project-section">
+    <h2>Project Objective</h2>
+    <p>Use World Bank energy access data to map electricity coverage gaps across Africa and calculate the populations living without reliable power, to inform programme prioritisation.</p>
+  </div>
+
+  <div class="project-section">
+    <h2>Learning Objectives</h2>
+    <p>By completing this project you will demonstrate the ability to:</p>
+    <ul>
+      <li>Clean and structure country-level electricity access data</li>
+      <li>Use spreadsheet functions to convert coverage percentages into absolute population figures</li>
+      <li>Build charts that communicate both rate and scale of the access gap</li>
+      <li>Apply descriptive analysis to rank countries by the true size of the problem, not just the percentage</li>
+      <li>Translate energy statistics into a clear programme prioritisation recommendation</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Dataset Information</h2>
+    <div class="dataset-box">
+      <table>
+        <tr><td>Dataset Name</td><td>Sustainable Energy for All — Access to Electricity</td></tr>
+        <tr><td>Publisher</td><td>World Bank</td></tr>
+        <tr><td>Description</td><td>Country-level percentage of population with access to electricity, alongside total population figures, across multiple years</td></tr>
+        <tr><td>File Format</td><td>CSV / XLSX (downloadable from the World Bank Data portal)</td></tr>
+        <tr><td>Approximate Size</td><td>~2–5MB</td></tr>
+        <tr><td>Licence</td><td>Public — CC BY 4.0 (World Bank Open Data)</td></tr>
+        <tr><td>Download Link</td><td><a href="https://data.worldbank.org/indicator/EG.ELC.ACCS.ZS" target="_blank">data.worldbank.org — Access to Electricity ↗</a></td></tr>
+        <tr><td>Access</td><td>Free, no account required. Download the indicator as CSV directly from the World Bank Data portal, along with the corresponding total population indicator.</td></tr>
+        <tr><td>Known Limitations</td><td>Some countries have gaps in reporting for certain years, and access percentages don't distinguish grid vs. off-grid or reliability of supply — note this distinction in your analysis.</td></tr>
+        <tr><td>Last Verified</td><td>July 2026</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Project Tasks</h2>
+
+    <h3>Stage 1 — Data Cleaning &amp; Preparation</h3>
+    <ul>
+      <li>Import electricity access and population indicators and filter to African countries</li>
+      <li>Audit for missing years and align both datasets on the same reporting year per country</li>
+      <li>Standardise country naming across the two source tables</li>
+      <li>Calculate the derived column: population without electricity access (population × (1 − access rate))</li>
+    </ul>
+
+    <h3>Stage 2 — Analysis</h3>
+    <ul>
+      <li>Rank countries by both access rate and absolute population without power</li>
+      <li>Identify countries that look 'moderate priority' by rate alone but are 'high priority' once population is factored in</li>
+      <li>Group countries into priority tiers combining both dimensions</li>
+    </ul>
+
+    <h3>Stage 3 — Visualisation &amp; Reporting</h3>
+    <ul>
+      <li>Build a dashboard tab with a rate-vs-population comparison chart and a priority tier table</li>
+      <li>Highlight the 3–5 countries representing the largest unserved populations</li>
+      <li>Write a short prioritisation recommendation for the non-profit's deployment planning</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Expected Deliverables</h2>
+    <ul>
+      <li>Google Sheets workbook: raw data tab, cleaning log tab, calculation tabs, and dashboard tab</li>
+      <li>Prioritisation summary (1 page) with the top recommended countries and rationale</li>
+      <li>GitHub repository with an exported copy of the workbook and a completed README</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Assessment Rubric</h2>
+    <table class="rubric-table">
+      <thead><tr><th>Criterion</th><th>What Good Looks Like</th><th>Weight</th></tr></thead>
+      <tbody>
+        <tr><td>Data Cleaning</td><td>Access and population data correctly aligned and missing years handled</td><td>20%</td></tr>
+        <tr><td>Population Calculation</td><td>Formula correctly converts rate into absolute unserved population</td><td>25%</td></tr>
+        <tr><td>Priority Tiering</td><td>Tiering logic combines rate and population sensibly</td><td>20%</td></tr>
+        <tr><td>Chart Clarity</td><td>Charts clearly show the difference between rate-based and population-based priority</td><td>20%</td></tr>
+        <tr><td>Recommendation Quality</td><td>Final prioritisation is well-reasoned and clearly justified</td><td>5%</td></tr>
+        <tr><td>Documentation</td><td>README is complete and repository is well-organised</td><td>10%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="project-section">
+    <h2>Stretch Challenge</h2>
+    <div class="stretch-box">
+      <p><strong>For learners who want to go further:</strong></p>
+      <ul>
+      <li>Layer in urban/rural access breakdowns where available to refine the priority ranking further</li>
+      <li>Estimate the number of off-grid solar units needed to close the gap in the top 3 priority countries using a simple assumption-based calculation</li>
+      <li>Write a reflection on why percentage-only reporting can mislead resource allocation decisions</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Responsible AI Guidance</h2>
+    <div class="ai-box">
+      <p><strong>You may use AI to:</strong> explain concepts, debug formulas, check your writing clarity, and brainstorm analytical questions.</p>
+      <p style="margin-top:8px;"><strong>You may not use AI to:</strong> generate the analysis, write your recommendations, or produce your report for you. Your interpretations and conclusions must be your own.</p>
+      <p style="margin-top:8px;">If you use AI assistance significantly at any stage, note it briefly in your README. Employers value honesty about tooling — what matters is that the thinking and judgement are yours.</p>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Reflection Questions</h2>
+    <div class="reflection-box">
+      <p>Include written answers to at least three of these in your README or a separate reflection document:</p>
+      <ul>
+      <li>Which country changed rank the most once you factored in population, and why does that matter?</li>
+      <li>What was the most significant data alignment challenge, and how did you resolve it?</li>
+      <li>How did you decide on your priority tier thresholds?</li>
+      <li>If you were presenting this to the non-profit's board, what three sentences would you lead with?</li>
+      <li>What additional data would most improve the precision of your prioritisation?</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>GitHub Portfolio Guidance</h2>
+    <p>Organise your repository as follows:</p>
+    <div class="code-block">electricity-access-energy-poverty/
+├── data/
+│   └── raw/           ← link to source, not the file itself
+├── sheets/
+│   └── electricity-access-energy-poverty.xlsx   ← exported copy of your Google Sheet
+├── images/
+│   └── chart_screenshots.png
+└── README.md</div>
+    <p style="margin-top:12px;">Your README should include: project title, business challenge, tools used, dataset source and link, key findings (3 bullet points), and screenshots of your key charts.</p>
+    <a href="../github-guide.html" class="btn btn-outline btn-sm mt-16">Full GitHub Guide →</a>
+  </div>
+
+  <div class="project-section">
+    <h2>LinkedIn Showcase Guidance</h2>
+    <p>When sharing this project on LinkedIn, use this structure:</p>
+    <ul>
+      <li><strong>Hook:</strong> Start with the business problem, not the tools ("An energy access non-profit needed to know not just where coverage was lowest, but where the most people were actually affected…")</li>
+      <li><strong>What you did:</strong> Briefly describe your analytical approach in Google Sheets</li>
+      <li><strong>Key finding:</strong> Share one specific, concrete insight from the data</li>
+      <li><strong>Link:</strong> Include your GitHub repository link</li>
+      <li><strong>Tags:</strong> #DataAnalytics #GoogleSheets #ALXAfrica #EnergyAccess #PortfolioProject</li>
+    </ul>
+    <a href="../linkedin-guide.html" class="btn btn-outline btn-sm mt-16">Full LinkedIn Guide →</a>
+  </div>
+
+  <div style="margin-top:48px; padding-top:32px; border-top:2px solid var(--border); display:flex; gap:14px; flex-wrap:wrap;">
+    <a href="../projects.html" class="btn btn-outline">← Back to All Projects</a>
+    <a href="../projects.html?course=DA-2" class="btn btn-dark">More Google Sheets Projects</a>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo-text">ALX Data Portfolio Hub</div>
+      <p>Real-world portfolio projects for ALX Data Analytics learners.</p>
+    </div>
+    <div class="footer-col"><h5>Projects</h5><ul>
+      <li><a href="../projects.html?course=DA-2">Google Sheets</a></li>
+      <li><a href="../projects.html?course=DA-3">MySQL</a></li>
+      <li><a href="../projects.html?course=DA-4">Power BI</a></li>
+      <li><a href="../projects.html?course=Capstone">Capstone</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Guides</h5><ul>
+      <li><a href="../how-it-works.html">How It Works</a></li>
+      <li><a href="../responsible-ai.html">Responsible AI</a></li>
+      <li><a href="../github-guide.html">GitHub Guide</a></li>
+      <li><a href="../linkedin-guide.html">LinkedIn Guide</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Info</h5><ul>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../feedback.html">Feedback</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 ALX Data Programs — Technical Mentorship. Pilot prototype.</span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

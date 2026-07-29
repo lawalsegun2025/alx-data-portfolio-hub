@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-commerce Returns & Customer Behaviour — ALX Data Portfolio Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <span class="nav-logo-badge">ALX</span>
+      <span class="nav-logo-text">Data Portfolio Hub</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../projects.html" class="active">Explore Projects</a></li>
+      <li><a href="../how-it-works.html">How It Works</a></li>
+      <li><a href="../github-guide.html">GitHub Guide</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../projects.html" class="nav-cta">Browse Projects →</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="../index.html">Home</a>
+    <span>›</span>
+    <a href="../projects.html">Projects</a>
+    <span>›</span>
+    <span>E-commerce Returns & Customer Behaviour</span>
+  </div>
+</div>
+
+<div class="project-header">
+  <div class="container">
+    <div class="project-meta-row">
+      <span class="meta-badge">📊 DA-2: Google Sheets</span>
+      <span class="meta-badge">🛒 Retail & E-commerce</span>
+      <span class="meta-badge">⚡ Intermediate</span>
+      <span class="meta-badge">⏱ 8–12 hrs</span>
+    </div>
+    <h1>E-commerce Returns & Customer Behaviour</h1>
+    <div class="project-meta-row" style="margin-top:16px;">
+      <span class="meta-badge">📊 Google Sheets</span>
+      <span class="meta-badge">✓ Real-World Data</span>
+    </div>
+  </div>
+</div>
+
+<div class="project-body">
+
+  <div class="project-section">
+    <h2>Business Challenge</h2>
+    
+    <p>You have been engaged as a data analyst by an online retailer whose returns rate has been climbing quarter over quarter, eating into margins. Leadership doesn't have a clear picture of which product categories or customer segments are driving the increase.</p>
+    <p>Your task is to clean and analyse the retailer's transaction data to uncover return patterns, identify the specific product categories driving the problem, and make inventory and policy recommendations.</p>
+    
+  </div>
+
+  <div class="project-section">
+    <h2>Background</h2>
+    
+    <p>Returns are one of the costliest and most under-analysed parts of e-commerce operations. Raw transaction exports are usually messy — inconsistent product naming, duplicate order records, and missing return reason codes are all common. Cleaning this properly is most of the work before any pattern can be trusted.</p>
+    <p>This project simulates the kind of operational analysis a data analyst would do for a retail or e-commerce company trying to control returns-driven margin loss.</p>
+    
+  </div>
+
+  <div class="project-section">
+    <h2>Project Objective</h2>
+    <p>Clean and analyse a retail transaction dataset to uncover return patterns, identify the product categories and customer segments driving returns, and make evidence-based inventory recommendations.</p>
+  </div>
+
+  <div class="project-section">
+    <h2>Learning Objectives</h2>
+    <p>By completing this project you will demonstrate the ability to:</p>
+    <ul>
+      <li>Clean a messy real-world transaction dataset with inconsistent product and order data</li>
+      <li>Use spreadsheet functions to calculate return rates by category, product, and time period</li>
+      <li>Design pivot tables to segment return behaviour by customer and product dimensions</li>
+      <li>Build charts that isolate the specific drivers of a business problem</li>
+      <li>Translate transaction-level patterns into inventory and policy recommendations</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Dataset Information</h2>
+    <div class="dataset-box">
+      <table>
+        <tr><td>Dataset Name</td><td>Online Retail Transaction Dataset</td></tr>
+        <tr><td>Publisher</td><td>Kaggle (UCI Machine Learning Repository source)</td></tr>
+        <tr><td>Description</td><td>Transaction-level records for a UK-based online retailer, including invoice numbers, product descriptions, quantities (negative values indicating returns), prices, and customer IDs</td></tr>
+        <tr><td>File Format</td><td>CSV / XLSX</td></tr>
+        <tr><td>Approximate Size</td><td>~45MB</td></tr>
+        <tr><td>Licence</td><td>Public — check Kaggle dataset page for current licence terms</td></tr>
+        <tr><td>Download Link</td><td><a href="https://www.kaggle.com/datasets/carrie1/ecommerce-data" target="_blank">kaggle.com — E-commerce Data ↗</a></td></tr>
+        <tr><td>Access</td><td>Free Kaggle account required. Click 'Download' on the dataset page.</td></tr>
+        <tr><td>Known Limitations</td><td>The dataset represents a single retailer over roughly one year — treat findings as illustrative of methodology rather than universally generalisable, and say so in your report.</td></tr>
+        <tr><td>Last Verified</td><td>July 2026</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Project Tasks</h2>
+
+    <h3>Stage 1 — Data Cleaning &amp; Preparation</h3>
+    <ul>
+      <li>Import the raw transaction export and identify returns (negative quantity rows) vs. standard sales rows</li>
+      <li>Audit for missing customer IDs, duplicate invoices, and inconsistent product descriptions</li>
+      <li>Standardise product category groupings (the raw data has free-text descriptions, not categories)</li>
+      <li>Calculate derived columns: return rate by product, order value, and return-to-sale time gap where determinable</li>
+    </ul>
+
+    <h3>Stage 2 — Analysis</h3>
+    <ul>
+      <li>Build pivot tables comparing return rate by product category and by customer segment</li>
+      <li>Identify the specific categories with return rates well above the overall average</li>
+      <li>Segment customers into low/high-return groups and compare their purchasing patterns</li>
+    </ul>
+
+    <h3>Stage 3 — Visualisation &amp; Reporting</h3>
+    <ul>
+      <li>Build a dashboard tab with a category return-rate ranking chart and a customer segment comparison</li>
+      <li>Highlight the 2–3 categories responsible for the largest share of total returns value</li>
+      <li>Write inventory and policy recommendations addressing the specific drivers you identified</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Expected Deliverables</h2>
+    <ul>
+      <li>Google Sheets workbook: raw data tab, cleaning log tab, pivot tables, and dashboard tab</li>
+      <li>Recommendations summary (1 page) naming priority categories and proposed actions</li>
+      <li>GitHub repository with an exported copy of the workbook and a completed README</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Assessment Rubric</h2>
+    <table class="rubric-table">
+      <thead><tr><th>Criterion</th><th>What Good Looks Like</th><th>Weight</th></tr></thead>
+      <tbody>
+        <tr><td>Data Cleaning</td><td>Product categorisation and return identification are accurate and documented</td><td>25%</td></tr>
+        <tr><td>Return Rate Calculation</td><td>Formulas correctly calculate rate by category, segment, and time</td><td>20%</td></tr>
+        <tr><td>Pivot Table Design</td><td>Tables correctly isolate the true drivers, not just top-line volume</td><td>15%</td></tr>
+        <tr><td>Chart Clarity</td><td>Dashboard clearly shows which categories/segments matter most</td><td>20%</td></tr>
+        <tr><td>Recommendation Quality</td><td>Recommendations are specific, grounded in the data, and actionable</td><td>10%</td></tr>
+        <tr><td>Documentation</td><td>README is complete and repository is well-organised</td><td>10%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="project-section">
+    <h2>Stretch Challenge</h2>
+    <div class="stretch-box">
+      <p><strong>For learners who want to go further:</strong></p>
+      <ul>
+      <li>Estimate the total margin impact of returns in the top offending category using average product price data</li>
+      <li>Build a simple customer lifetime value view to see whether high-return customers are also high-value customers</li>
+      <li>Write a reflection on what additional data (return reason codes, product ratings) would sharpen the analysis</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Responsible AI Guidance</h2>
+    <div class="ai-box">
+      <p><strong>You may use AI to:</strong> explain concepts, debug formulas, check your writing clarity, and brainstorm analytical questions.</p>
+      <p style="margin-top:8px;"><strong>You may not use AI to:</strong> generate the analysis, write your recommendations, or produce your report for you. Your interpretations and conclusions must be your own.</p>
+      <p style="margin-top:8px;">If you use AI assistance significantly at any stage, note it briefly in your README. Employers value honesty about tooling — what matters is that the thinking and judgement are yours.</p>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Reflection Questions</h2>
+    <div class="reflection-box">
+      <p>Include written answers to at least three of these in your README or a separate reflection document:</p>
+      <ul>
+      <li>How did you decide on your product category groupings, given the raw data only had free-text descriptions?</li>
+      <li>What was the most significant data quality issue you encountered, and how did you resolve it?</li>
+      <li>Which finding most surprised you, and why?</li>
+      <li>If you were presenting this to the retailer's operations team, what three sentences would you lead with?</li>
+      <li>What additional data would most improve the precision of your recommendations?</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>GitHub Portfolio Guidance</h2>
+    <p>Organise your repository as follows:</p>
+    <div class="code-block">ecommerce-returns-customer-behaviour/
+├── data/
+│   └── raw/           ← link to source, not the file itself
+├── sheets/
+│   └── ecommerce-returns-customer-behaviour.xlsx   ← exported copy of your Google Sheet
+├── images/
+│   └── chart_screenshots.png
+└── README.md</div>
+    <p style="margin-top:12px;">Your README should include: project title, business challenge, tools used, dataset source and link, key findings (3 bullet points), and screenshots of your key charts.</p>
+    <a href="../github-guide.html" class="btn btn-outline btn-sm mt-16">Full GitHub Guide →</a>
+  </div>
+
+  <div class="project-section">
+    <h2>LinkedIn Showcase Guidance</h2>
+    <p>When sharing this project on LinkedIn, use this structure:</p>
+    <ul>
+      <li><strong>Hook:</strong> Start with the business problem, not the tools ("An online retailer's returns rate kept climbing — and nobody could say exactly why…")</li>
+      <li><strong>What you did:</strong> Briefly describe your analytical approach in Google Sheets</li>
+      <li><strong>Key finding:</strong> Share one specific, concrete insight from the data</li>
+      <li><strong>Link:</strong> Include your GitHub repository link</li>
+      <li><strong>Tags:</strong> #DataAnalytics #GoogleSheets #ALXAfrica #Ecommerce #PortfolioProject</li>
+    </ul>
+    <a href="../linkedin-guide.html" class="btn btn-outline btn-sm mt-16">Full LinkedIn Guide →</a>
+  </div>
+
+  <div style="margin-top:48px; padding-top:32px; border-top:2px solid var(--border); display:flex; gap:14px; flex-wrap:wrap;">
+    <a href="../projects.html" class="btn btn-outline">← Back to All Projects</a>
+    <a href="../projects.html?course=DA-2" class="btn btn-dark">More Google Sheets Projects</a>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo-text">ALX Data Portfolio Hub</div>
+      <p>Real-world portfolio projects for ALX Data Analytics learners.</p>
+    </div>
+    <div class="footer-col"><h5>Projects</h5><ul>
+      <li><a href="../projects.html?course=DA-2">Google Sheets</a></li>
+      <li><a href="../projects.html?course=DA-3">MySQL</a></li>
+      <li><a href="../projects.html?course=DA-4">Power BI</a></li>
+      <li><a href="../projects.html?course=Capstone">Capstone</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Guides</h5><ul>
+      <li><a href="../how-it-works.html">How It Works</a></li>
+      <li><a href="../responsible-ai.html">Responsible AI</a></li>
+      <li><a href="../github-guide.html">GitHub Guide</a></li>
+      <li><a href="../linkedin-guide.html">LinkedIn Guide</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Info</h5><ul>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../feedback.html">Feedback</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 ALX Data Programs — Technical Mentorship. Pilot prototype.</span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

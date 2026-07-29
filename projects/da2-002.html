@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crop Yield & Food Security Analysis — ALX Data Portfolio Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <span class="nav-logo-badge">ALX</span>
+      <span class="nav-logo-text">Data Portfolio Hub</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../projects.html" class="active">Explore Projects</a></li>
+      <li><a href="../how-it-works.html">How It Works</a></li>
+      <li><a href="../github-guide.html">GitHub Guide</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../projects.html" class="nav-cta">Browse Projects →</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="../index.html">Home</a>
+    <span>›</span>
+    <a href="../projects.html">Projects</a>
+    <span>›</span>
+    <span>Crop Yield & Food Security Analysis</span>
+  </div>
+</div>
+
+<div class="project-header">
+  <div class="container">
+    <div class="project-meta-row">
+      <span class="meta-badge">📊 DA-2: Google Sheets</span>
+      <span class="meta-badge">🌾 Agriculture & Food Systems</span>
+      <span class="meta-badge">⚡ Beginner</span>
+      <span class="meta-badge">⏱ 6–10 hrs</span>
+    </div>
+    <h1>Crop Yield & Food Security Analysis</h1>
+    <div class="project-meta-row" style="margin-top:16px;">
+      <span class="meta-badge">📊 Google Sheets</span>
+      <span class="meta-badge">✓ Real-World Data</span>
+    </div>
+  </div>
+</div>
+
+<div class="project-body">
+
+  <div class="project-section">
+    <h2>Business Challenge</h2>
+    
+    <p>You have been brought in as a data analyst by a regional food security monitoring unit that tracks agricultural production trends across Sub-Saharan Africa. Leadership needs to understand which countries and crops show declining yields, so limited intervention funding can be directed where it's needed most.</p>
+    <p>Your task is to analyse crop production and yield records, identify the countries and crops at highest food security risk, and present findings the unit can use to prioritise its next funding cycle.</p>
+    
+  </div>
+
+  <div class="project-section">
+    <h2>Background</h2>
+    
+    <p>Food security monitoring depends on being able to spot yield decline early — before it becomes a crisis. Crop production data is publicly available at scale, but turning it into a prioritised risk picture requires careful cleaning and thoughtful analysis.</p>
+    <p>This project simulates the early-stage analytical work a data analyst would do for a food security NGO or agricultural ministry: taking a broad, multi-country dataset and narrowing it down to a short list of areas needing attention.</p>
+    
+  </div>
+
+  <div class="project-section">
+    <h2>Project Objective</h2>
+    <p>Analyse FAO crop production data to assess food security trends across Sub-Saharan Africa, and identify the countries and crops showing the highest risk of yield decline.</p>
+  </div>
+
+  <div class="project-section">
+    <h2>Learning Objectives</h2>
+    <p>By completing this project you will demonstrate the ability to:</p>
+    <ul>
+      <li>Clean and structure multi-country, multi-year agricultural production data</li>
+      <li>Use descriptive analysis to identify meaningful trends in noisy time-series data</li>
+      <li>Build charts that communicate trend direction and risk level clearly</li>
+      <li>Design pivot tables to compare yield performance across countries and crop types</li>
+      <li>Translate agricultural data into a food-security risk narrative for a non-technical audience</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Dataset Information</h2>
+    <div class="dataset-box">
+      <table>
+        <tr><td>Dataset Name</td><td>FAOSTAT — Crops and Livestock Products</td></tr>
+        <tr><td>Publisher</td><td>Food and Agriculture Organization of the United Nations (FAO)</td></tr>
+        <tr><td>Description</td><td>Country-level annual production, area harvested, and yield data across major crop types, covering multiple decades</td></tr>
+        <tr><td>File Format</td><td>CSV (bulk download) or filtered export via FAOSTAT query tool</td></tr>
+        <tr><td>Approximate Size</td><td>~10–30MB depending on country/crop selection</td></tr>
+        <tr><td>Licence</td><td>Public — CC BY 4.0</td></tr>
+        <tr><td>Download Link</td><td><a href="https://www.fao.org/faostat/en/" target="_blank">fao.org — FAOSTAT ↗</a></td></tr>
+        <tr><td>Access</td><td>Free, no account required. Use the FAOSTAT query tool to filter by region (Sub-Saharan Africa), crop type, and year range, then export as CSV.</td></tr>
+        <tr><td>Known Limitations</td><td>Some countries have incomplete reporting for certain years — treat gaps as missing data, not zero production, and document how you handled them.</td></tr>
+        <tr><td>Last Verified</td><td>July 2026</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Project Tasks</h2>
+
+    <h3>Stage 1 — Data Cleaning &amp; Preparation</h3>
+    <ul>
+      <li>Import the raw FAOSTAT export and filter to Sub-Saharan African countries and a representative set of staple crops</li>
+      <li>Audit for missing years, inconsistent units, and outlier values</li>
+      <li>Standardise country names and crop categories</li>
+      <li>Calculate derived columns: year-over-year yield change, multi-year moving average</li>
+    </ul>
+
+    <h3>Stage 2 — Analysis</h3>
+    <ul>
+      <li>Build pivot tables comparing yield trends by country and crop over the available time range</li>
+      <li>Identify countries/crops with a sustained downward yield trend (not just a single bad year)</li>
+      <li>Rank countries by a simple food security risk indicator combining yield trend and production volume</li>
+    </ul>
+
+    <h3>Stage 3 — Visualisation &amp; Reporting</h3>
+    <ul>
+      <li>Build a dashboard tab with trend line charts by country and crop, and a ranked risk table</li>
+      <li>Use conditional formatting to highlight the highest-risk countries at a glance</li>
+      <li>Write a short summary identifying the top 3 priority countries and the reasoning behind the ranking</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Expected Deliverables</h2>
+    <ul>
+      <li>Google Sheets workbook: raw data tab, cleaning log tab, pivot tables, and dashboard tab</li>
+      <li>Ranked risk summary with supporting rationale (1 page)</li>
+      <li>GitHub repository with an exported copy of the workbook and a completed README</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Assessment Rubric</h2>
+    <table class="rubric-table">
+      <thead><tr><th>Criterion</th><th>What Good Looks Like</th><th>Weight</th></tr></thead>
+      <tbody>
+        <tr><td>Data Cleaning</td><td>Missing years and inconsistencies handled appropriately and documented</td><td>20%</td></tr>
+        <tr><td>Trend Analysis</td><td>Correctly distinguishes genuine multi-year trends from single-year noise</td><td>25%</td></tr>
+        <tr><td>Pivot Table Design</td><td>Tables correctly compare countries and crops on the right dimensions</td><td>15%</td></tr>
+        <tr><td>Chart Clarity</td><td>Charts clearly communicate trend direction and risk level</td><td>20%</td></tr>
+        <tr><td>Risk Ranking Logic</td><td>Ranking methodology is sound and clearly explained</td><td>10%</td></tr>
+        <tr><td>Documentation</td><td>README is complete and repository is well-organised</td><td>10%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="project-section">
+    <h2>Stretch Challenge</h2>
+    <div class="stretch-box">
+      <p><strong>For learners who want to go further:</strong></p>
+      <ul>
+      <li>Layer in population or import-dependency data to weight the risk ranking by how many people are affected</li>
+      <li>Build a small forecast using a simple trendline projection for the highest-risk country's top crop</li>
+      <li>Write a reflection on how climate data (rainfall, temperature) might explain the trends you found</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Responsible AI Guidance</h2>
+    <div class="ai-box">
+      <p><strong>You may use AI to:</strong> explain concepts, debug formulas, check your writing clarity, and brainstorm analytical questions.</p>
+      <p style="margin-top:8px;"><strong>You may not use AI to:</strong> generate the analysis, write your recommendations, or produce your report for you. Your interpretations and conclusions must be your own.</p>
+      <p style="margin-top:8px;">If you use AI assistance significantly at any stage, note it briefly in your README. Employers value honesty about tooling — what matters is that the thinking and judgement are yours.</p>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Reflection Questions</h2>
+    <div class="reflection-box">
+      <p>Include written answers to at least three of these in your README or a separate reflection document:</p>
+      <ul>
+      <li>How did you distinguish a genuine yield decline from normal year-to-year variation?</li>
+      <li>What was the hardest data cleaning decision you had to make, and why?</li>
+      <li>Which country's finding most surprised you, and why?</li>
+      <li>If you were presenting this to a funding committee, what would you lead with?</li>
+      <li>What additional data would most improve the accuracy of your risk ranking?</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>GitHub Portfolio Guidance</h2>
+    <p>Organise your repository as follows:</p>
+    <div class="code-block">crop-yield-food-security-analysis/
+├── data/
+│   └── raw/           ← link to source, not the file itself
+├── sheets/
+│   └── crop-yield-food-security-analysis.xlsx   ← exported copy of your Google Sheet
+├── images/
+│   └── chart_screenshots.png
+└── README.md</div>
+    <p style="margin-top:12px;">Your README should include: project title, business challenge, tools used, dataset source and link, key findings (3 bullet points), and screenshots of your key charts.</p>
+    <a href="../github-guide.html" class="btn btn-outline btn-sm mt-16">Full GitHub Guide →</a>
+  </div>
+
+  <div class="project-section">
+    <h2>LinkedIn Showcase Guidance</h2>
+    <p>When sharing this project on LinkedIn, use this structure:</p>
+    <ul>
+      <li><strong>Hook:</strong> Start with the business problem, not the tools ("A food security unit needed to know exactly where declining yields put the most people at risk…")</li>
+      <li><strong>What you did:</strong> Briefly describe your analytical approach in Google Sheets</li>
+      <li><strong>Key finding:</strong> Share one specific, concrete insight from the data</li>
+      <li><strong>Link:</strong> Include your GitHub repository link</li>
+      <li><strong>Tags:</strong> #DataAnalytics #GoogleSheets #ALXAfrica #FoodSecurity #PortfolioProject</li>
+    </ul>
+    <a href="../linkedin-guide.html" class="btn btn-outline btn-sm mt-16">Full LinkedIn Guide →</a>
+  </div>
+
+  <div style="margin-top:48px; padding-top:32px; border-top:2px solid var(--border); display:flex; gap:14px; flex-wrap:wrap;">
+    <a href="../projects.html" class="btn btn-outline">← Back to All Projects</a>
+    <a href="../projects.html?course=DA-2" class="btn btn-dark">More Google Sheets Projects</a>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo-text">ALX Data Portfolio Hub</div>
+      <p>Real-world portfolio projects for ALX Data Analytics learners.</p>
+    </div>
+    <div class="footer-col"><h5>Projects</h5><ul>
+      <li><a href="../projects.html?course=DA-2">Google Sheets</a></li>
+      <li><a href="../projects.html?course=DA-3">MySQL</a></li>
+      <li><a href="../projects.html?course=DA-4">Power BI</a></li>
+      <li><a href="../projects.html?course=Capstone">Capstone</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Guides</h5><ul>
+      <li><a href="../how-it-works.html">How It Works</a></li>
+      <li><a href="../responsible-ai.html">Responsible AI</a></li>
+      <li><a href="../github-guide.html">GitHub Guide</a></li>
+      <li><a href="../linkedin-guide.html">LinkedIn Guide</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Info</h5><ul>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../feedback.html">Feedback</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 ALX Data Programs — Technical Mentorship. Pilot prototype.</span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

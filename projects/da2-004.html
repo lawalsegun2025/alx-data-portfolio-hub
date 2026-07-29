@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>School Enrollment & Gender Gap Analysis — ALX Data Portfolio Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <span class="nav-logo-badge">ALX</span>
+      <span class="nav-logo-text">Data Portfolio Hub</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../projects.html" class="active">Explore Projects</a></li>
+      <li><a href="../how-it-works.html">How It Works</a></li>
+      <li><a href="../github-guide.html">GitHub Guide</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../projects.html" class="nav-cta">Browse Projects →</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="../index.html">Home</a>
+    <span>›</span>
+    <a href="../projects.html">Projects</a>
+    <span>›</span>
+    <span>School Enrollment & Gender Gap Analysis</span>
+  </div>
+</div>
+
+<div class="project-header">
+  <div class="container">
+    <div class="project-meta-row">
+      <span class="meta-badge">📊 DA-2: Google Sheets</span>
+      <span class="meta-badge">📚 Education</span>
+      <span class="meta-badge">⚡ Beginner</span>
+      <span class="meta-badge">⏱ 6–8 hrs</span>
+    </div>
+    <h1>School Enrollment & Gender Gap Analysis</h1>
+    <div class="project-meta-row" style="margin-top:16px;">
+      <span class="meta-badge">📊 Google Sheets</span>
+      <span class="meta-badge">✓ Real-World Data</span>
+    </div>
+  </div>
+</div>
+
+<div class="project-body">
+
+  <div class="project-section">
+    <h2>Business Challenge</h2>
+    
+    <p>You have been engaged as a data analyst by an education-focused NGO working to close gender gaps in school enrollment across Africa. Leadership needs a clear, country-by-country picture of where the gender gap is widest and how it has changed over time, to prioritise where new programming should launch.</p>
+    <p>Your task is to analyse UNESCO enrollment data, calculate gender parity indicators by country, and identify where the NGO's next intervention would have the greatest impact.</p>
+    
+  </div>
+
+  <div class="project-section">
+    <h2>Background</h2>
+    
+    <p>Gender gaps in education access vary significantly across countries and education levels — primary, secondary, and tertiary. A country that has closed the gap at primary level may still have a wide gap at secondary level. Spotting these differences requires structured, level-by-level comparison, not just a single national average.</p>
+    <p>This project simulates the kind of baseline analysis a data analyst would produce for an education NGO scoping a new country programme.</p>
+    
+  </div>
+
+  <div class="project-section">
+    <h2>Project Objective</h2>
+    <p>Analyse UNESCO education enrollment data to understand gender disparities and learning access gaps across African countries, and identify where a new intervention would have the greatest impact.</p>
+  </div>
+
+  <div class="project-section">
+    <h2>Learning Objectives</h2>
+    <p>By completing this project you will demonstrate the ability to:</p>
+    <ul>
+      <li>Clean and structure multi-level, multi-country enrollment data</li>
+      <li>Design pivot tables to compare enrollment by gender, country, and education level</li>
+      <li>Calculate a gender parity index from raw enrollment figures</li>
+      <li>Build charts that clearly communicate gap size and direction of change</li>
+      <li>Translate enrollment data into a prioritised set of programme recommendations</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Dataset Information</h2>
+    <div class="dataset-box">
+      <table>
+        <tr><td>Dataset Name</td><td>UIS Education Statistics — Enrollment by Sex and Level</td></tr>
+        <tr><td>Publisher</td><td>UNESCO Institute for Statistics (UIS)</td></tr>
+        <tr><td>Description</td><td>Country-level enrollment figures broken down by sex and education level (primary, secondary, tertiary), covering multiple years</td></tr>
+        <tr><td>File Format</td><td>CSV / XLSX (downloadable via the UIS data browser)</td></tr>
+        <tr><td>Approximate Size</td><td>~5–15MB depending on country/level selection</td></tr>
+        <tr><td>Licence</td><td>Public — UNESCO open data terms</td></tr>
+        <tr><td>Download Link</td><td><a href="http://uis.unesco.org/" target="_blank">uis.unesco.org ↗</a></td></tr>
+        <tr><td>Access</td><td>Free, no account required. Use the UIS data browser to filter to African countries and enrollment-by-sex indicators, then export as CSV.</td></tr>
+        <tr><td>Known Limitations</td><td>Reporting completeness varies significantly by country and year — some countries have large gaps in their time series. Be explicit about which years you're comparing for each country.</td></tr>
+        <tr><td>Last Verified</td><td>July 2026</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Project Tasks</h2>
+
+    <h3>Stage 1 — Data Cleaning &amp; Preparation</h3>
+    <ul>
+      <li>Import the raw UIS export and filter to African countries and relevant enrollment indicators</li>
+      <li>Audit for missing years and inconsistent country naming</li>
+      <li>Standardise education level categories (primary, secondary, tertiary)</li>
+      <li>Calculate the gender parity index (female enrollment ÷ male enrollment) for each country, level, and year</li>
+    </ul>
+
+    <h3>Stage 2 — Analysis</h3>
+    <ul>
+      <li>Build pivot tables comparing parity index by country and education level</li>
+      <li>Identify countries where the gap widens significantly between primary and secondary level</li>
+      <li>Rank countries by the size and direction of change in their gender gap over the available years</li>
+    </ul>
+
+    <h3>Stage 3 — Visualisation &amp; Reporting</h3>
+    <ul>
+      <li>Build a dashboard tab with a parity index comparison chart and a country ranking table</li>
+      <li>Use conditional formatting to flag countries with a widening (not narrowing) gap</li>
+      <li>Write a short summary naming the top 3 countries where intervention would have the greatest impact</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Expected Deliverables</h2>
+    <ul>
+      <li>Google Sheets workbook: raw data tab, cleaning log tab, pivot tables, and dashboard tab</li>
+      <li>Prioritised country summary (1 page) with supporting rationale</li>
+      <li>GitHub repository with an exported copy of the workbook and a completed README</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Assessment Rubric</h2>
+    <table class="rubric-table">
+      <thead><tr><th>Criterion</th><th>What Good Looks Like</th><th>Weight</th></tr></thead>
+      <tbody>
+        <tr><td>Data Cleaning</td><td>Missing years and inconsistencies handled appropriately and documented</td><td>20%</td></tr>
+        <tr><td>Parity Index Calculation</td><td>Formula is correct and consistently applied across countries/levels</td><td>25%</td></tr>
+        <tr><td>Pivot Table Design</td><td>Tables correctly compare the right dimensions</td><td>15%</td></tr>
+        <tr><td>Chart Clarity</td><td>Charts clearly communicate gap size and trend direction</td><td>20%</td></tr>
+        <tr><td>Recommendation Quality</td><td>Country prioritisation is well-reasoned and grounded in the data</td><td>10%</td></tr>
+        <tr><td>Documentation</td><td>README is complete and repository is well-organised</td><td>10%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="project-section">
+    <h2>Stretch Challenge</h2>
+    <div class="stretch-box">
+      <p><strong>For learners who want to go further:</strong></p>
+      <ul>
+      <li>Break the analysis down further by urban/rural or regional data where available</li>
+      <li>Cross-reference the gender gap with a second indicator (e.g. GDP per capita) to test for correlation</li>
+      <li>Write a reflection on what non-enrollment data (e.g. dropout reasons) would deepen the analysis</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Responsible AI Guidance</h2>
+    <div class="ai-box">
+      <p><strong>You may use AI to:</strong> explain concepts, debug formulas, check your writing clarity, and brainstorm analytical questions.</p>
+      <p style="margin-top:8px;"><strong>You may not use AI to:</strong> generate the analysis, write your recommendations, or produce your report for you. Your interpretations and conclusions must be your own.</p>
+      <p style="margin-top:8px;">If you use AI assistance significantly at any stage, note it briefly in your README. Employers value honesty about tooling — what matters is that the thinking and judgement are yours.</p>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Reflection Questions</h2>
+    <div class="reflection-box">
+      <p>Include written answers to at least three of these in your README or a separate reflection document:</p>
+      <ul>
+      <li>What was the most significant data quality issue you encountered, and how did you resolve it?</li>
+      <li>Which country's pattern most surprised you, and why?</li>
+      <li>How did the gap change between primary and secondary level, and what might explain that?</li>
+      <li>If you were presenting this to the NGO's programme team, what three sentences would you lead with?</li>
+      <li>What additional data would most improve the quality of your recommendations?</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>GitHub Portfolio Guidance</h2>
+    <p>Organise your repository as follows:</p>
+    <div class="code-block">school-enrollment-gender-gap-analysis/
+├── data/
+│   └── raw/           ← link to source, not the file itself
+├── sheets/
+│   └── school-enrollment-gender-gap-analysis.xlsx   ← exported copy of your Google Sheet
+├── images/
+│   └── chart_screenshots.png
+└── README.md</div>
+    <p style="margin-top:12px;">Your README should include: project title, business challenge, tools used, dataset source and link, key findings (3 bullet points), and screenshots of your key charts.</p>
+    <a href="../github-guide.html" class="btn btn-outline btn-sm mt-16">Full GitHub Guide →</a>
+  </div>
+
+  <div class="project-section">
+    <h2>LinkedIn Showcase Guidance</h2>
+    <p>When sharing this project on LinkedIn, use this structure:</p>
+    <ul>
+      <li><strong>Hook:</strong> Start with the business problem, not the tools ("An education NGO needed to know exactly where the gender gap in schooling was widest — and where it was actually widening…")</li>
+      <li><strong>What you did:</strong> Briefly describe your analytical approach in Google Sheets</li>
+      <li><strong>Key finding:</strong> Share one specific, concrete insight from the data</li>
+      <li><strong>Link:</strong> Include your GitHub repository link</li>
+      <li><strong>Tags:</strong> #DataAnalytics #GoogleSheets #ALXAfrica #EducationEquity #PortfolioProject</li>
+    </ul>
+    <a href="../linkedin-guide.html" class="btn btn-outline btn-sm mt-16">Full LinkedIn Guide →</a>
+  </div>
+
+  <div style="margin-top:48px; padding-top:32px; border-top:2px solid var(--border); display:flex; gap:14px; flex-wrap:wrap;">
+    <a href="../projects.html" class="btn btn-outline">← Back to All Projects</a>
+    <a href="../projects.html?course=DA-2" class="btn btn-dark">More Google Sheets Projects</a>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo-text">ALX Data Portfolio Hub</div>
+      <p>Real-world portfolio projects for ALX Data Analytics learners.</p>
+    </div>
+    <div class="footer-col"><h5>Projects</h5><ul>
+      <li><a href="../projects.html?course=DA-2">Google Sheets</a></li>
+      <li><a href="../projects.html?course=DA-3">MySQL</a></li>
+      <li><a href="../projects.html?course=DA-4">Power BI</a></li>
+      <li><a href="../projects.html?course=Capstone">Capstone</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Guides</h5><ul>
+      <li><a href="../how-it-works.html">How It Works</a></li>
+      <li><a href="../responsible-ai.html">Responsible AI</a></li>
+      <li><a href="../github-guide.html">GitHub Guide</a></li>
+      <li><a href="../linkedin-guide.html">LinkedIn Guide</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Info</h5><ul>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../feedback.html">Feedback</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 ALX Data Programs — Technical Mentorship. Pilot prototype.</span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

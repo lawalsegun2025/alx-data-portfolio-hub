@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile Money Adoption Trends — ALX Data Portfolio Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <span class="nav-logo-badge">ALX</span>
+      <span class="nav-logo-text">Data Portfolio Hub</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../projects.html" class="active">Explore Projects</a></li>
+      <li><a href="../how-it-works.html">How It Works</a></li>
+      <li><a href="../github-guide.html">GitHub Guide</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../projects.html" class="nav-cta">Browse Projects →</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="../index.html">Home</a>
+    <span>›</span>
+    <a href="../projects.html">Projects</a>
+    <span>›</span>
+    <span>Mobile Money Adoption Trends</span>
+  </div>
+</div>
+
+<div class="project-header">
+  <div class="container">
+    <div class="project-meta-row">
+      <span class="meta-badge">📊 DA-2: Google Sheets</span>
+      <span class="meta-badge">🏦 Banking & Finance</span>
+      <span class="meta-badge">⚡ Intermediate</span>
+      <span class="meta-badge">⏱ 8–12 hrs</span>
+    </div>
+    <h1>Mobile Money Adoption Trends</h1>
+    <div class="project-meta-row" style="margin-top:16px;">
+      <span class="meta-badge">📊 Google Sheets</span>
+      <span class="meta-badge">✓ Real-World Data</span>
+    </div>
+  </div>
+</div>
+
+<div class="project-body">
+
+  <div class="project-section">
+    <h2>Business Challenge</h2>
+    
+    <p>You have been engaged as a data analyst by a pan-African financial inclusion advocacy group. The group wants to understand where mobile money adoption is accelerating, where it's stalling, and what that means for its next round of financial inclusion programming.</p>
+    <p>Your task is to analyse mobile money and account ownership data across African markets, identify adoption patterns, and recommend where the group should focus its outreach efforts.</p>
+    
+  </div>
+
+  <div class="project-section">
+    <h2>Background</h2>
+    
+    <p>Mobile money has reshaped financial inclusion across Africa over the past decade, but adoption is far from uniform — some markets have leapfrogged traditional banking almost entirely, while others lag behind. Spotting these patterns requires careful handling of survey-based data, which comes with its own quirks: different sample sizes, survey years, and definitions across countries.</p>
+    <p>This project simulates the kind of market analysis a data analyst would produce for a fintech company or a financial inclusion NGO deciding where to expand next.</p>
+    
+  </div>
+
+  <div class="project-section">
+    <h2>Project Objective</h2>
+    <p>Examine mobile money growth data across African markets to identify adoption patterns and recommend where a financial inclusion programme should focus next.</p>
+  </div>
+
+  <div class="project-section">
+    <h2>Learning Objectives</h2>
+    <p>By completing this project you will demonstrate the ability to:</p>
+    <ul>
+      <li>Clean and validate survey-based financial inclusion data across multiple countries and years</li>
+      <li>Apply data validation rules to catch inconsistent or implausible entries</li>
+      <li>Use spreadsheet functions to calculate adoption rates and growth metrics</li>
+      <li>Apply basic statistical reasoning to distinguish genuine trends from sampling noise</li>
+      <li>Translate cross-country financial data into a clear set of programming recommendations</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Dataset Information</h2>
+    <div class="dataset-box">
+      <table>
+        <tr><td>Dataset Name</td><td>Global Findex Database — Mobile Money Indicators</td></tr>
+        <tr><td>Publisher</td><td>World Bank</td></tr>
+        <tr><td>Description</td><td>Survey-based indicators on account ownership, mobile money usage, and financial behaviour, covering multiple survey waves across African countries</td></tr>
+        <tr><td>File Format</td><td>CSV / XLSX (downloadable from the Global Findex data portal)</td></tr>
+        <tr><td>Approximate Size</td><td>~5–10MB for the Africa subset</td></tr>
+        <tr><td>Licence</td><td>Public — World Bank Open Data terms</td></tr>
+        <tr><td>Download Link</td><td><a href="https://globalfindex.worldbank.org/" target="_blank">globalfindex.worldbank.org ↗</a></td></tr>
+        <tr><td>Access</td><td>Free, no account required. Download the full dataset or use the online data explorer to filter to African countries and export as CSV.</td></tr>
+        <tr><td>Known Limitations</td><td>Findex data is survey-based with several years between waves, so it shows snapshots rather than continuous trends — be explicit in your analysis about which years you're comparing.</td></tr>
+        <tr><td>Last Verified</td><td>July 2026</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Project Tasks</h2>
+
+    <h3>Stage 1 — Data Cleaning &amp; Preparation</h3>
+    <ul>
+      <li>Import the raw Findex export and filter to African countries and mobile-money-relevant indicators</li>
+      <li>Apply data validation to catch implausible values (e.g. percentages outside 0–100%)</li>
+      <li>Standardise country names and survey year labels</li>
+      <li>Calculate derived columns: adoption rate change between survey waves</li>
+    </ul>
+
+    <h3>Stage 2 — Analysis</h3>
+    <ul>
+      <li>Segment countries into adoption tiers (high, moderate, low/emerging) based on latest available data</li>
+      <li>Compare growth between survey waves to identify accelerating vs. stalling markets</li>
+      <li>Cross-reference adoption rates with account ownership to spot markets where mobile money is substituting for, not adding to, formal banking</li>
+    </ul>
+
+    <h3>Stage 3 — Visualisation &amp; Reporting</h3>
+    <ul>
+      <li>Build a dashboard tab with an adoption tier map/table and a growth comparison chart</li>
+      <li>Highlight the 3–5 markets showing the strongest growth signal for expansion</li>
+      <li>Write a short set of recommendations for where the advocacy group should focus outreach</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Expected Deliverables</h2>
+    <ul>
+      <li>Google Sheets workbook: raw data tab, validation/cleaning log tab, analysis tabs, and dashboard tab</li>
+      <li>Recommendations summary (1 page) naming priority markets and the reasoning behind them</li>
+      <li>GitHub repository with an exported copy of the workbook and a completed README</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Assessment Rubric</h2>
+    <table class="rubric-table">
+      <thead><tr><th>Criterion</th><th>What Good Looks Like</th><th>Weight</th></tr></thead>
+      <tbody>
+        <tr><td>Data Validation</td><td>Implausible or inconsistent entries correctly identified and handled</td><td>20%</td></tr>
+        <tr><td>Adoption Tier Logic</td><td>Segmentation methodology is sound and consistently applied</td><td>20%</td></tr>
+        <tr><td>Growth Analysis</td><td>Correctly compares survey waves and accounts for gaps between them</td><td>20%</td></tr>
+        <tr><td>Chart Clarity</td><td>Dashboard clearly communicates tier and growth patterns</td><td>15%</td></tr>
+        <tr><td>Recommendation Quality</td><td>Recommendations are specific, grounded in the data, and actionable</td><td>15%</td></tr>
+        <tr><td>Documentation</td><td>README is complete and repository is well-organised</td><td>10%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="project-section">
+    <h2>Stretch Challenge</h2>
+    <div class="stretch-box">
+      <p><strong>For learners who want to go further:</strong></p>
+      <ul>
+      <li>Cross-reference adoption data with internet/mobile penetration data to test whether infrastructure explains the pattern</li>
+      <li>Build a simple scoring model ranking markets by 'expansion opportunity' using multiple weighted indicators</li>
+      <li>Write a reflection on how survey timing gaps could bias your growth comparisons</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Responsible AI Guidance</h2>
+    <div class="ai-box">
+      <p><strong>You may use AI to:</strong> explain concepts, debug formulas, check your writing clarity, and brainstorm analytical questions.</p>
+      <p style="margin-top:8px;"><strong>You may not use AI to:</strong> generate the analysis, write your recommendations, or produce your report for you. Your interpretations and conclusions must be your own.</p>
+      <p style="margin-top:8px;">If you use AI assistance significantly at any stage, note it briefly in your README. Employers value honesty about tooling — what matters is that the thinking and judgement are yours.</p>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Reflection Questions</h2>
+    <div class="reflection-box">
+      <p>Include written answers to at least three of these in your README or a separate reflection document:</p>
+      <ul>
+      <li>How did you handle the gap in years between Findex survey waves?</li>
+      <li>What made a country 'high adoption' in your tiering — and would you define it differently now?</li>
+      <li>Which market's pattern most surprised you, and why?</li>
+      <li>If you were presenting this to the advocacy group's board, what would you lead with?</li>
+      <li>What additional data would most strengthen your market recommendations?</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>GitHub Portfolio Guidance</h2>
+    <p>Organise your repository as follows:</p>
+    <div class="code-block">mobile-money-adoption-trends/
+├── data/
+│   └── raw/           ← link to source, not the file itself
+├── sheets/
+│   └── mobile-money-adoption-trends.xlsx   ← exported copy of your Google Sheet
+├── images/
+│   └── chart_screenshots.png
+└── README.md</div>
+    <p style="margin-top:12px;">Your README should include: project title, business challenge, tools used, dataset source and link, key findings (3 bullet points), and screenshots of your key charts.</p>
+    <a href="../github-guide.html" class="btn btn-outline btn-sm mt-16">Full GitHub Guide →</a>
+  </div>
+
+  <div class="project-section">
+    <h2>LinkedIn Showcase Guidance</h2>
+    <p>When sharing this project on LinkedIn, use this structure:</p>
+    <ul>
+      <li><strong>Hook:</strong> Start with the business problem, not the tools ("A financial inclusion group needed to know exactly where mobile money adoption was accelerating — and where it had stalled…")</li>
+      <li><strong>What you did:</strong> Briefly describe your analytical approach in Google Sheets</li>
+      <li><strong>Key finding:</strong> Share one specific, concrete insight from the data</li>
+      <li><strong>Link:</strong> Include your GitHub repository link</li>
+      <li><strong>Tags:</strong> #DataAnalytics #GoogleSheets #ALXAfrica #FinancialInclusion #PortfolioProject</li>
+    </ul>
+    <a href="../linkedin-guide.html" class="btn btn-outline btn-sm mt-16">Full LinkedIn Guide →</a>
+  </div>
+
+  <div style="margin-top:48px; padding-top:32px; border-top:2px solid var(--border); display:flex; gap:14px; flex-wrap:wrap;">
+    <a href="../projects.html" class="btn btn-outline">← Back to All Projects</a>
+    <a href="../projects.html?course=DA-2" class="btn btn-dark">More Google Sheets Projects</a>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo-text">ALX Data Portfolio Hub</div>
+      <p>Real-world portfolio projects for ALX Data Analytics learners.</p>
+    </div>
+    <div class="footer-col"><h5>Projects</h5><ul>
+      <li><a href="../projects.html?course=DA-2">Google Sheets</a></li>
+      <li><a href="../projects.html?course=DA-3">MySQL</a></li>
+      <li><a href="../projects.html?course=DA-4">Power BI</a></li>
+      <li><a href="../projects.html?course=Capstone">Capstone</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Guides</h5><ul>
+      <li><a href="../how-it-works.html">How It Works</a></li>
+      <li><a href="../responsible-ai.html">Responsible AI</a></li>
+      <li><a href="../github-guide.html">GitHub Guide</a></li>
+      <li><a href="../linkedin-guide.html">LinkedIn Guide</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Info</h5><ul>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../feedback.html">Feedback</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 ALX Data Programs — Technical Mentorship. Pilot prototype.</span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
