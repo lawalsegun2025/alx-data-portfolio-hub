@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Education Outcomes & Learning Poverty Report — ALX Data Portfolio Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <span class="nav-logo-badge">ALX</span>
+      <span class="nav-logo-text">Data Portfolio Hub</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../projects.html" class="active">Explore Projects</a></li>
+      <li><a href="../how-it-works.html">How It Works</a></li>
+      <li><a href="../github-guide.html">GitHub Guide</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../projects.html" class="nav-cta">Browse Projects →</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="../index.html">Home</a>
+    <span>›</span>
+    <a href="../projects.html">Projects</a>
+    <span>›</span>
+    <span>Education Outcomes & Learning Poverty Report</span>
+  </div>
+</div>
+
+<div class="project-header">
+  <div class="container">
+    <div class="project-meta-row">
+      <span class="meta-badge">📈 DA-4: Power BI</span>
+      <span class="meta-badge">📚 Education</span>
+      <span class="meta-badge">⚡ Beginner</span>
+      <span class="meta-badge">⏱ 8–12 hrs</span>
+    </div>
+    <h1>Education Outcomes & Learning Poverty Report</h1>
+    <div class="project-meta-row" style="margin-top:16px;">
+      <span class="meta-badge">📈 Power BI</span>
+      <span class="meta-badge">✓ Real-World Data</span>
+    </div>
+  </div>
+</div>
+
+<div class="project-body">
+
+  <div class="project-section">
+    <h2>Business Challenge</h2>
+    
+    <p>You have been engaged as a data analyst by an education policy team preparing a report on literacy and learning poverty trends across African nations. They need a report leadership can explore country-by-country, not a fixed set of static charts.</p>
+    <p>Your task is to design a World Bank education dashboard showing literacy rates, learning poverty indicators, and school enrollment trends across African nations.</p>
+    
+  </div>
+
+  <div class="project-section">
+    <h2>Background</h2>
+    
+    <p>'Learning poverty' — the share of children unable to read a simple text by age 10 — has become a key education policy indicator. Combining it with literacy and enrollment data in a single, well-modelled Power BI report lets a policy team compare countries fairly and quickly.</p>
+    <p>This project simulates the kind of policy dashboard a data analyst would build for an education ministry or education-focused NGO.</p>
+    
+  </div>
+
+  <div class="project-section">
+    <h2>Project Objective</h2>
+    <p>Design a World Bank education dashboard showing literacy rates, learning poverty indicators, and school enrollment trends across African nations to support education policy analysis.</p>
+  </div>
+
+  <div class="project-section">
+    <h2>Learning Objectives</h2>
+    <p>By completing this project you will demonstrate the ability to:</p>
+    <ul>
+      <li>Use Power Query to clean and merge multiple World Bank education indicators</li>
+      <li>Build a data model relating literacy, learning poverty, and enrollment data by country and year</li>
+      <li>Write DAX measures comparing countries against regional averages</li>
+      <li>Design map and comparison visuals suited to a policy audience</li>
+      <li>Present education outcome findings clearly to a non-technical policy audience</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Dataset Information</h2>
+    <div class="dataset-box">
+      <table>
+        <tr><td>Dataset Name</td><td>World Bank Education Statistics (EdStats)</td></tr>
+        <tr><td>Publisher</td><td>World Bank</td></tr>
+        <tr><td>Description</td><td>Country-level indicators covering literacy rates, learning poverty, and school enrollment across multiple education levels and years</td></tr>
+        <tr><td>File Format</td><td>CSV / XLSX (import into Power BI via Power Query)</td></tr>
+        <tr><td>Approximate Size</td><td>~5–15MB depending on indicator selection</td></tr>
+        <tr><td>Licence</td><td>Public — CC BY 4.0 (World Bank Open Data)</td></tr>
+        <tr><td>Download Link</td><td><a href="https://data.worldbank.org/topic/education" target="_blank">data.worldbank.org — Education Statistics ↗</a></td></tr>
+        <tr><td>Access</td><td>Free, no account required. Download the relevant indicators (literacy rate, learning poverty, enrollment) as CSV directly from the World Bank Data portal.</td></tr>
+        <tr><td>Known Limitations</td><td>Not all countries report every indicator for every year — some gaps are expected, particularly for the newer learning poverty indicator. Document how you handled missing values.</td></tr>
+        <tr><td>Last Verified</td><td>July 2026</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Project Tasks</h2>
+
+    <h3>Stage 1 — Data Import &amp; Modelling</h3>
+    <ul>
+      <li>Use Power Query to import and merge literacy, learning poverty, and enrollment indicators, filtered to African countries</li>
+      <li>Clean inconsistent country naming across the source tables using Power Query transformations</li>
+      <li>Build a data model with country and date dimension tables linked to the indicator fact table</li>
+    </ul>
+
+    <h3>Stage 2 — DAX Measures &amp; Analysis</h3>
+    <ul>
+      <li>Write DAX measures for: literacy rate, learning poverty rate, and each country's deviation from the regional average</li>
+      <li>Add a measure ranking countries by learning poverty rate within the current filter context</li>
+      <li>Validate each measure against a manual spot-check calculation to confirm accuracy</li>
+    </ul>
+
+    <h3>Stage 3 — Dashboard Design &amp; Reporting</h3>
+    <ul>
+      <li>Design a report with a map visual showing learning poverty by country, a ranked comparison chart, and an enrollment trend page</li>
+      <li>Apply consistent, ALX-inspired colours and clear data labels throughout</li>
+      <li>Add slicers for year and education level so analysts can explore the data themselves</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Expected Deliverables</h2>
+    <ul>
+      <li>Power BI report file (.pbix) with map, ranking, and trend pages</li>
+      <li>Short written summary (1 page) of the three most important findings</li>
+      <li>GitHub repository with the .pbix file, dashboard screenshots, and a completed README</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Assessment Rubric</h2>
+    <table class="rubric-table">
+      <thead><tr><th>Criterion</th><th>What Good Looks Like</th><th>Weight</th></tr></thead>
+      <tbody>
+        <tr><td>Data Modelling</td><td>Tables correctly merged and modelled with clean relationships</td><td>20%</td></tr>
+        <tr><td>DAX Measures</td><td>Measures correctly calculate rates and regional deviation</td><td>25%</td></tr>
+        <tr><td>Map & Visual Design</td><td>Map visual and charts clearly communicate country-level patterns</td><td>25%</td></tr>
+        <tr><td>Interactivity</td><td>Slicers work correctly and support genuine exploration</td><td>15%</td></tr>
+        <tr><td>Insight Quality</td><td>Findings are specific and policy-relevant</td><td>10%</td></tr>
+        <tr><td>Documentation</td><td>README is complete and repository is well-organised</td><td>5%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="project-section">
+    <h2>Stretch Challenge</h2>
+    <div class="stretch-box">
+      <p><strong>For learners who want to go further:</strong></p>
+      <ul>
+      <li>Add a scatter visual plotting learning poverty against enrollment rate to explore any relationship</li>
+      <li>Build a drill-through page enabling a policy analyst to inspect any single country's full indicator profile</li>
+      <li>Write a reflection on why enrollment alone is an incomplete measure of education system performance</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Responsible AI Guidance</h2>
+    <div class="ai-box">
+      <p><strong>You may use AI to:</strong> explain DAX concepts, debug measure syntax errors, check your writing clarity, and brainstorm which visuals best fit a question.</p>
+      <p style="margin-top:8px;"><strong>You may not use AI to:</strong> generate your DAX measures end-to-end, write your analysis, or produce your report for you. Your modelling decisions and interpretations must be your own.</p>
+      <p style="margin-top:8px;">If you use AI assistance significantly at any stage, note it briefly in your README. Employers value honesty about tooling — what matters is that the thinking and judgement are yours.</p>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Reflection Questions</h2>
+    <div class="reflection-box">
+      <p>Include written answers to at least three of these in your README or a separate reflection document:</p>
+      <ul>
+      <li>How did you handle countries with missing learning poverty data?</li>
+      <li>Which DAX measure was the most challenging to get right, and why?</li>
+      <li>What pattern did the map visual reveal that a table would have hidden?</li>
+      <li>If you were presenting this to an education ministry, what three sentences would you lead with?</li>
+      <li>What additional data would most strengthen this report's policy relevance?</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>GitHub Portfolio Guidance</h2>
+    <p>Organise your repository as follows:</p>
+    <div class="code-block">education-outcomes-learning-poverty-report/
+├── data/
+│   └── raw/              ← link to source, not the file itself
+├── powerbi/
+│   └── education-outcomes-learning-poverty-report.pbix
+├── images/
+│   └── dashboard_screenshot.png
+└── README.md</div>
+    <p style="margin-top:12px;">Your README should include: project title, business challenge, tools used, dataset source and link, key findings (3 bullet points), and a screenshot of each dashboard page.</p>
+    <a href="../github-guide.html" class="btn btn-outline btn-sm mt-16">Full GitHub Guide →</a>
+  </div>
+
+  <div class="project-section">
+    <h2>LinkedIn Showcase Guidance</h2>
+    <p>When sharing this project on LinkedIn, use this structure:</p>
+    <ul>
+      <li><strong>Hook:</strong> Start with the business problem, not the tools ("An education policy team could count how many children were enrolled — but not how many could actually read…")</li>
+      <li><strong>What you did:</strong> Briefly describe your analytical approach in Power BI</li>
+      <li><strong>Key finding:</strong> Share one specific, concrete insight from the data</li>
+      <li><strong>Link:</strong> Include your GitHub repository link</li>
+      <li><strong>Tags:</strong> #DataAnalytics #PowerBI #DAX #ALXAfrica #EducationPolicy #PortfolioProject</li>
+    </ul>
+    <a href="../linkedin-guide.html" class="btn btn-outline btn-sm mt-16">Full LinkedIn Guide →</a>
+  </div>
+
+  <div style="margin-top:48px; padding-top:32px; border-top:2px solid var(--border); display:flex; gap:14px; flex-wrap:wrap;">
+    <a href="../projects.html" class="btn btn-outline">← Back to All Projects</a>
+    <a href="../projects.html?course=DA-4" class="btn btn-dark">More Power BI Projects</a>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo-text">ALX Data Portfolio Hub</div>
+      <p>Real-world portfolio projects for ALX Data Analytics learners.</p>
+    </div>
+    <div class="footer-col"><h5>Projects</h5><ul>
+      <li><a href="../projects.html?course=DA-2">Google Sheets</a></li>
+      <li><a href="../projects.html?course=DA-3">MySQL</a></li>
+      <li><a href="../projects.html?course=DA-4">Power BI</a></li>
+      <li><a href="../projects.html?course=Capstone">Capstone</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Guides</h5><ul>
+      <li><a href="../how-it-works.html">How It Works</a></li>
+      <li><a href="../responsible-ai.html">Responsible AI</a></li>
+      <li><a href="../github-guide.html">GitHub Guide</a></li>
+      <li><a href="../linkedin-guide.html">LinkedIn Guide</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Info</h5><ul>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../feedback.html">Feedback</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 ALX Data Programs — Technical Mentorship. Pilot prototype.</span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
