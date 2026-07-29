@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insurance Claims & Risk Profiling — ALX Data Portfolio Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <span class="nav-logo-badge">ALX</span>
+      <span class="nav-logo-text">Data Portfolio Hub</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../projects.html" class="active">Explore Projects</a></li>
+      <li><a href="../how-it-works.html">How It Works</a></li>
+      <li><a href="../github-guide.html">GitHub Guide</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../projects.html" class="nav-cta">Browse Projects →</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="../index.html">Home</a>
+    <span>›</span>
+    <a href="../projects.html">Projects</a>
+    <span>›</span>
+    <span>Insurance Claims & Risk Profiling</span>
+  </div>
+</div>
+
+<div class="project-header">
+  <div class="container">
+    <div class="project-meta-row">
+      <span class="meta-badge">🗄️ DA-3: MySQL</span>
+      <span class="meta-badge">🛡️ Insurance</span>
+      <span class="meta-badge">⚡ Advanced</span>
+      <span class="meta-badge">⏱ 12–18 hrs</span>
+    </div>
+    <h1>Insurance Claims & Risk Profiling</h1>
+    <div class="project-meta-row" style="margin-top:16px;">
+      <span class="meta-badge">🗄️ MySQL</span>
+      <span class="meta-badge">✓ Real-World Data</span>
+    </div>
+  </div>
+</div>
+
+<div class="project-body">
+
+  <div class="project-section">
+    <h2>Business Challenge</h2>
+    
+    <p>You have been engaged as a data analyst by an insurance underwriting team. They need risk profiles built directly from historical claims data to inform pricing and underwriting decisions — not intuition, but evidence from the claims database itself.</p>
+    <p>Your task is to use SQL to analyse insurance claims data, build risk profiles by customer segment, and surface insights that inform underwriting decisions.</p>
+    
+  </div>
+
+  <div class="project-section">
+    <h2>Background</h2>
+    
+    <p>Underwriting decisions depend on being able to segment policyholders by risk accurately and defensibly. This requires advanced SQL — subqueries to compare segment-level claim rates, window functions to rank risk within segments, and CTEs to keep complex multi-step logic readable and auditable.</p>
+    <p>This project simulates the kind of risk analysis a data analyst would produce for an insurance underwriting or actuarial support team.</p>
+    
+  </div>
+
+  <div class="project-section">
+    <h2>Project Objective</h2>
+    <p>Use SQL to analyse insurance claims data, build risk profiles by customer segment, and surface insights that inform underwriting decisions.</p>
+  </div>
+
+  <div class="project-section">
+    <h2>Learning Objectives</h2>
+    <p>By completing this project you will demonstrate the ability to:</p>
+    <ul>
+      <li>Query a claims dataset using advanced SQL: subqueries, window functions, and CTEs</li>
+      <li>Build customer segments based on demographic and policy characteristics</li>
+      <li>Calculate claim frequency and severity metrics by segment</li>
+      <li>Use CTEs to structure complex, multi-step risk calculations readably</li>
+      <li>Translate segment-level risk findings into underwriting-relevant insights</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Dataset Information</h2>
+    <div class="dataset-box">
+      <table>
+        <tr><td>Dataset Name</td><td>Health Insurance Dataset</td></tr>
+        <tr><td>Publisher</td><td>Kaggle</td></tr>
+        <tr><td>Description</td><td>Policyholder-level records including demographic characteristics, policy details, and claims/charges data</td></tr>
+        <tr><td>File Format</td><td>CSV (import into MySQL as a policyholders/claims table)</td></tr>
+        <tr><td>Approximate Size</td><td>~1MB</td></tr>
+        <tr><td>Licence</td><td>Public — check Kaggle page for latest terms</td></tr>
+        <tr><td>Download Link</td><td><a href="https://www.kaggle.com/datasets/teertha/ushealthinsurancedataset" target="_blank">kaggle.com — Insurance Dataset ↗</a></td></tr>
+        <tr><td>Access</td><td>Free Kaggle account required. Click 'Download' on the dataset page, then import into MySQL.</td></tr>
+        <tr><td>Known Limitations</td><td>This dataset covers a specific market and is smaller/simpler than a real insurer's claims database — treat findings as illustrative of methodology and CTE/window-function technique, and note this clearly in your report.</td></tr>
+        <tr><td>Last Verified</td><td>July 2026</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Project Tasks</h2>
+
+    <h3>Stage 1 — Schema Design &amp; Data Import</h3>
+    <ul>
+      <li>Import the policyholder/claims CSV into MySQL and set appropriate data types</li>
+      <li>Audit for missing values and outlier charge amounts</li>
+      <li>Define segment categories (e.g. age band, region, lifestyle factors available in the data)</li>
+    </ul>
+
+    <h3>Stage 2 — Query Development</h3>
+    <ul>
+      <li>Write queries to answer these business questions:
+        <ul style="margin-top:8px; padding-left:20px;">
+          <li>What is the average claim amount by risk segment (e.g. age band combined with a lifestyle factor)?</li>
+          <li>Which segment shows the highest variance in claim amounts, indicating higher unpredictability?</li>
+          <li>Using a CTE, how does each segment's average claim compare to the overall population average?</li>
+          <li>Using a window function, how do individual policyholders rank within their segment by claim amount?</li>
+        </ul>
+      </li>
+      <li>Save all queries as documented .sql scripts with inline comments explaining the logic</li>
+    </ul>
+
+    <h3>Stage 3 — Insights &amp; Reporting</h3>
+    <ul>
+      <li>Summarise your query results into a risk profile table by segment</li>
+      <li>Identify the 2–3 segments that most warrant differentiated underwriting attention</li>
+      <li>Write a short summary explaining the risk profiling logic for an underwriting audience</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Expected Deliverables</h2>
+    <ul>
+      <li>MySQL schema/import script (schema.sql) with comments</li>
+      <li>MySQL analysis queries (analysis.sql), each commented and mapped to a business question, using CTEs and window functions</li>
+      <li>Risk profile summary (1 page)</li>
+      <li>GitHub repository with all scripts and a completed README</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Assessment Rubric</h2>
+    <table class="rubric-table">
+      <thead><tr><th>Criterion</th><th>What Good Looks Like</th><th>Weight</th></tr></thead>
+      <tbody>
+        <tr><td>Data Cleaning & Import</td><td>Missing values and outliers correctly identified and handled</td><td>15%</td></tr>
+        <tr><td>Query Accuracy</td><td>Subqueries, CTEs, and window functions are correctly and appropriately used</td><td>30%</td></tr>
+        <tr><td>Code Quality</td><td>Queries are clearly structured, readable, and commented</td><td>15%</td></tr>
+        <tr><td>Segmentation Logic</td><td>Risk segments are well-reasoned and consistently applied</td><td>20%</td></tr>
+        <tr><td>Insight Quality</td><td>Findings are specific and defensible for underwriting use</td><td>10%</td></tr>
+        <tr><td>Documentation</td><td>README is complete and repository is well-organised</td><td>10%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="project-section">
+    <h2>Stretch Challenge</h2>
+    <div class="stretch-box">
+      <p><strong>For learners who want to go further:</strong></p>
+      <ul>
+      <li>Build a composite risk score per segment combining claim frequency and severity into a single ranked metric</li>
+      <li>Use a recursive or multi-level CTE to build a segment hierarchy (e.g. region → age band → lifestyle factor)</li>
+      <li>Write a reflection on the ethical considerations of using demographic and lifestyle data in risk-based pricing</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Responsible AI Guidance</h2>
+    <div class="ai-box">
+      <p><strong>You may use AI to:</strong> explain SQL concepts, debug query syntax errors, check your writing clarity, and brainstorm analytical questions.</p>
+      <p style="margin-top:8px;"><strong>You may not use AI to:</strong> generate your queries end-to-end, write your analysis, or produce your report for you. Your query logic and interpretations must be your own.</p>
+      <p style="margin-top:8px;">If you use AI assistance significantly at any stage, note it briefly in your README. Employers value honesty about tooling — what matters is that the thinking and judgement are yours.</p>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Reflection Questions</h2>
+    <div class="reflection-box">
+      <p>Include written answers to at least three of these in your README or a separate reflection document:</p>
+      <ul>
+      <li>How did you decide on your segment definitions, and what alternative definition might change the findings?</li>
+      <li>Which query was the most challenging to write correctly, and what approach did you take?</li>
+      <li>Which segment's risk profile most surprised you, and why?</li>
+      <li>If you were presenting this to the underwriting team, what three sentences would you lead with?</li>
+      <li>What ethical considerations did you keep in mind when segmenting policyholders by demographic data?</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>GitHub Portfolio Guidance</h2>
+    <p>Organise your repository as follows:</p>
+    <div class="code-block">insurance-claims-risk-profiling/
+├── data/
+│   └── raw/           ← link to source, not the file itself
+├── sql/
+│   ├── schema.sql
+│   └── analysis.sql
+├── images/
+│   └── query_results.png
+└── README.md</div>
+    <p style="margin-top:12px;">Your README should include: project title, business challenge, tools used, dataset source and link, key findings (3 bullet points), and screenshots or output samples of your key queries.</p>
+    <a href="../github-guide.html" class="btn btn-outline btn-sm mt-16">Full GitHub Guide →</a>
+  </div>
+
+  <div class="project-section">
+    <h2>LinkedIn Showcase Guidance</h2>
+    <p>When sharing this project on LinkedIn, use this structure:</p>
+    <ul>
+      <li><strong>Hook:</strong> Start with the business problem, not the tools ("An underwriting team priced risk on instinct — the claims data told a more precise story…")</li>
+      <li><strong>What you did:</strong> Briefly describe your analytical approach in MySQL</li>
+      <li><strong>Key finding:</strong> Share one specific, concrete insight from the data</li>
+      <li><strong>Link:</strong> Include your GitHub repository link</li>
+      <li><strong>Tags:</strong> #DataAnalytics #SQL #MySQL #ALXAfrica #InsuranceAnalytics #PortfolioProject</li>
+    </ul>
+    <a href="../linkedin-guide.html" class="btn btn-outline btn-sm mt-16">Full LinkedIn Guide →</a>
+  </div>
+
+  <div style="margin-top:48px; padding-top:32px; border-top:2px solid var(--border); display:flex; gap:14px; flex-wrap:wrap;">
+    <a href="../projects.html" class="btn btn-outline">← Back to All Projects</a>
+    <a href="../projects.html?course=DA-3" class="btn btn-dark">More MySQL Projects</a>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo-text">ALX Data Portfolio Hub</div>
+      <p>Real-world portfolio projects for ALX Data Analytics learners.</p>
+    </div>
+    <div class="footer-col"><h5>Projects</h5><ul>
+      <li><a href="../projects.html?course=DA-2">Google Sheets</a></li>
+      <li><a href="../projects.html?course=DA-3">MySQL</a></li>
+      <li><a href="../projects.html?course=DA-4">Power BI</a></li>
+      <li><a href="../projects.html?course=Capstone">Capstone</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Guides</h5><ul>
+      <li><a href="../how-it-works.html">How It Works</a></li>
+      <li><a href="../responsible-ai.html">Responsible AI</a></li>
+      <li><a href="../github-guide.html">GitHub Guide</a></li>
+      <li><a href="../linkedin-guide.html">LinkedIn Guide</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Info</h5><ul>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../feedback.html">Feedback</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 ALX Data Programs — Technical Mentorship. Pilot prototype.</span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

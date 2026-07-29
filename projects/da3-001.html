@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospital Database: Patient & Treatment Analytics — ALX Data Portfolio Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <span class="nav-logo-badge">ALX</span>
+      <span class="nav-logo-text">Data Portfolio Hub</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../projects.html" class="active">Explore Projects</a></li>
+      <li><a href="../how-it-works.html">How It Works</a></li>
+      <li><a href="../github-guide.html">GitHub Guide</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../projects.html" class="nav-cta">Browse Projects →</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="../index.html">Home</a>
+    <span>›</span>
+    <a href="../projects.html">Projects</a>
+    <span>›</span>
+    <span>Hospital Database: Patient & Treatment Analytics</span>
+  </div>
+</div>
+
+<div class="project-header">
+  <div class="container">
+    <div class="project-meta-row">
+      <span class="meta-badge">🗄️ DA-3: MySQL</span>
+      <span class="meta-badge">🏥 Healthcare</span>
+      <span class="meta-badge">⚡ Beginner</span>
+      <span class="meta-badge">⏱ 8–12 hrs</span>
+    </div>
+    <h1>Hospital Database: Patient & Treatment Analytics</h1>
+    <div class="project-meta-row" style="margin-top:16px;">
+      <span class="meta-badge">🗄️ MySQL</span>
+      <span class="meta-badge">✓ Real-World Data</span>
+    </div>
+  </div>
+</div>
+
+<div class="project-body">
+
+  <div class="project-section">
+    <h2>Business Challenge</h2>
+    
+    <p>You have been engaged as a data analyst by a hospital administration team that keeps patient and treatment records in a relational database but has no one regularly querying it for operational insight. Leadership wants to understand patient volumes, treatment outcomes, and departmental performance directly from the underlying data.</p>
+    <p>Your task is to design and query a structured hospital database in MySQL to answer a set of operational questions the administration team can act on.</p>
+    
+  </div>
+
+  <div class="project-section">
+    <h2>Background</h2>
+    
+    <p>Hospital operations generate large volumes of structured, relational data — patients, admissions, departments, treatments — that is best explored with SQL rather than a spreadsheet. Being able to write clear, correct, well-commented queries against a live schema is a core data analyst skill.</p>
+    <p>This project simulates the kind of query-based reporting work a data analyst would do for a hospital's operations or quality-improvement team.</p>
+    
+  </div>
+
+  <div class="project-section">
+    <h2>Project Objective</h2>
+    <p>Query a structured hospital database to answer operational questions about patient volumes, treatment outcomes, and departmental performance, and present findings to hospital administration.</p>
+  </div>
+
+  <div class="project-section">
+    <h2>Learning Objectives</h2>
+    <p>By completing this project you will demonstrate the ability to:</p>
+    <ul>
+      <li>Design and import a relational schema for patient and admission data</li>
+      <li>Write SQL queries using joins to combine data across multiple tables</li>
+      <li>Use aggregate functions to summarise patient volumes and outcomes</li>
+      <li>Apply filtering logic to isolate specific patient cohorts or time periods</li>
+      <li>Translate query results into operational recommendations for hospital administration</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Dataset Information</h2>
+    <div class="dataset-box">
+      <table>
+        <tr><td>Dataset Name</td><td>Healthcare Analytics Dataset</td></tr>
+        <tr><td>Publisher</td><td>Kaggle</td></tr>
+        <tr><td>Description</td><td>Anonymised patient records including admission dates, diagnoses, treatments, length of stay, and outcomes across multiple facilities</td></tr>
+        <tr><td>File Format</td><td>CSV (import into MySQL as multiple normalised tables)</td></tr>
+        <tr><td>Approximate Size</td><td>~25MB</td></tr>
+        <tr><td>Licence</td><td>Public — CC0 (check Kaggle page for latest terms)</td></tr>
+        <tr><td>Download Link</td><td><a href="https://www.kaggle.com/datasets/nehaprabhavalkar/av-healthcare-analytics-ii" target="_blank">kaggle.com — Healthcare Analytics II ↗</a></td></tr>
+        <tr><td>Access</td><td>Free Kaggle account required. Click 'Download' on the dataset page, then import into MySQL Workbench or your preferred client.</td></tr>
+        <tr><td>Known Limitations</td><td>Dataset is based on an Indian hospital system. Treat it as representative data for demonstrating SQL analysis skills — focus on the querying process, not the geography.</td></tr>
+        <tr><td>Last Verified</td><td>July 2026</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Project Tasks</h2>
+
+    <h3>Stage 1 — Schema Design &amp; Data Import</h3>
+    <ul>
+      <li>Design a normalised schema: patients, admissions, departments, and facilities tables</li>
+      <li>Import the raw CSV and split it into the appropriate normalised tables</li>
+      <li>Define primary and foreign keys, and appropriate indexes for the columns you'll filter/join on most</li>
+      <li>Document your schema design decisions, including any normalisation trade-offs</li>
+    </ul>
+
+    <h3>Stage 2 — Query Development</h3>
+    <ul>
+      <li>Write queries to answer these business questions:
+        <ul style="margin-top:8px; padding-left:20px;">
+          <li>Which departments have the highest average length of stay?</li>
+          <li>What is the 30-day readmission rate by facility and by diagnosis category?</li>
+          <li>Which age groups account for the highest proportion of emergency admissions?</li>
+          <li>How does facility performance vary by bed occupancy rate?</li>
+        </ul>
+      </li>
+      <li>Save all queries as documented .sql scripts with inline comments explaining the logic</li>
+    </ul>
+
+    <h3>Stage 3 — Insights &amp; Reporting</h3>
+    <ul>
+      <li>Summarise your query results into a findings table covering the four business questions</li>
+      <li>Identify the two or three most actionable findings for hospital administration</li>
+      <li>Write a short summary explaining what the findings mean operationally</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Expected Deliverables</h2>
+    <ul>
+      <li>MySQL schema creation script (schema.sql) with comments</li>
+      <li>MySQL analysis queries (analysis.sql), each commented and mapped to a business question</li>
+      <li>Findings summary (1 page) written for hospital administration</li>
+      <li>GitHub repository with all scripts and a completed README</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Assessment Rubric</h2>
+    <table class="rubric-table">
+      <thead><tr><th>Criterion</th><th>What Good Looks Like</th><th>Weight</th></tr></thead>
+      <tbody>
+        <tr><td>Schema Design</td><td>Tables are correctly normalised with appropriate keys and relationships</td><td>20%</td></tr>
+        <tr><td>Query Accuracy</td><td>Queries return correct results using appropriate joins and aggregations</td><td>30%</td></tr>
+        <tr><td>Code Quality</td><td>Queries are clearly formatted and commented</td><td>15%</td></tr>
+        <tr><td>Filtering Logic</td><td>WHERE/HAVING clauses correctly isolate the right cohorts</td><td>15%</td></tr>
+        <tr><td>Insight Quality</td><td>Findings are specific, evidence-based, and operationally relevant</td><td>10%</td></tr>
+        <tr><td>Documentation</td><td>README is complete and repository is well-organised</td><td>10%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="project-section">
+    <h2>Stretch Challenge</h2>
+    <div class="stretch-box">
+      <p><strong>For learners who want to go further:</strong></p>
+      <ul>
+      <li>Add a query using window functions to rank departments by length-of-stay within each facility</li>
+      <li>Build a view that pre-aggregates key metrics for a simple reporting layer</li>
+      <li>Write a reflection on how you'd redesign the schema if this were a live, continuously updated system</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Responsible AI Guidance</h2>
+    <div class="ai-box">
+      <p><strong>You may use AI to:</strong> explain SQL concepts, debug query syntax errors, check your writing clarity, and brainstorm analytical questions.</p>
+      <p style="margin-top:8px;"><strong>You may not use AI to:</strong> generate your queries end-to-end, write your analysis, or produce your report for you. Your query logic and interpretations must be your own.</p>
+      <p style="margin-top:8px;">If you use AI assistance significantly at any stage, note it briefly in your README. Employers value honesty about tooling — what matters is that the thinking and judgement are yours.</p>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Reflection Questions</h2>
+    <div class="reflection-box">
+      <p>Include written answers to at least three of these in your README or a separate reflection document:</p>
+      <ul>
+      <li>What normalisation trade-offs did you make when designing your schema, and why?</li>
+      <li>Which query was the most challenging to write correctly? What approach did you take?</li>
+      <li>How did you validate that your join logic wasn't creating duplicate or dropped rows?</li>
+      <li>If you were presenting this to the hospital's operations director, what three sentences would you lead with?</li>
+      <li>What limitations of this dataset most affected the quality of your recommendations?</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>GitHub Portfolio Guidance</h2>
+    <p>Organise your repository as follows:</p>
+    <div class="code-block">hospital-database-patient-treatment-analytics/
+├── data/
+│   └── raw/           ← link to source, not the file itself
+├── sql/
+│   ├── schema.sql
+│   └── analysis.sql
+├── images/
+│   └── query_results.png
+└── README.md</div>
+    <p style="margin-top:12px;">Your README should include: project title, business challenge, tools used, dataset source and link, key findings (3 bullet points), and screenshots or output samples of your key queries.</p>
+    <a href="../github-guide.html" class="btn btn-outline btn-sm mt-16">Full GitHub Guide →</a>
+  </div>
+
+  <div class="project-section">
+    <h2>LinkedIn Showcase Guidance</h2>
+    <p>When sharing this project on LinkedIn, use this structure:</p>
+    <ul>
+      <li><strong>Hook:</strong> Start with the business problem, not the tools ("A hospital's own database held the answers to its performance problems — nobody was asking it the right questions…")</li>
+      <li><strong>What you did:</strong> Briefly describe your analytical approach in MySQL</li>
+      <li><strong>Key finding:</strong> Share one specific, concrete insight from the data</li>
+      <li><strong>Link:</strong> Include your GitHub repository link</li>
+      <li><strong>Tags:</strong> #DataAnalytics #SQL #MySQL #ALXAfrica #HealthcareAnalytics #PortfolioProject</li>
+    </ul>
+    <a href="../linkedin-guide.html" class="btn btn-outline btn-sm mt-16">Full LinkedIn Guide →</a>
+  </div>
+
+  <div style="margin-top:48px; padding-top:32px; border-top:2px solid var(--border); display:flex; gap:14px; flex-wrap:wrap;">
+    <a href="../projects.html" class="btn btn-outline">← Back to All Projects</a>
+    <a href="../projects.html?course=DA-3" class="btn btn-dark">More MySQL Projects</a>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo-text">ALX Data Portfolio Hub</div>
+      <p>Real-world portfolio projects for ALX Data Analytics learners.</p>
+    </div>
+    <div class="footer-col"><h5>Projects</h5><ul>
+      <li><a href="../projects.html?course=DA-2">Google Sheets</a></li>
+      <li><a href="../projects.html?course=DA-3">MySQL</a></li>
+      <li><a href="../projects.html?course=DA-4">Power BI</a></li>
+      <li><a href="../projects.html?course=Capstone">Capstone</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Guides</h5><ul>
+      <li><a href="../how-it-works.html">How It Works</a></li>
+      <li><a href="../responsible-ai.html">Responsible AI</a></li>
+      <li><a href="../github-guide.html">GitHub Guide</a></li>
+      <li><a href="../linkedin-guide.html">LinkedIn Guide</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Info</h5><ul>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../feedback.html">Feedback</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 ALX Data Programs — Technical Mentorship. Pilot prototype.</span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

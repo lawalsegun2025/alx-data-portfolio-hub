@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Banking Transactions & Fraud Pattern Detection — ALX Data Portfolio Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <span class="nav-logo-badge">ALX</span>
+      <span class="nav-logo-text">Data Portfolio Hub</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../projects.html" class="active">Explore Projects</a></li>
+      <li><a href="../how-it-works.html">How It Works</a></li>
+      <li><a href="../github-guide.html">GitHub Guide</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../projects.html" class="nav-cta">Browse Projects →</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="../index.html">Home</a>
+    <span>›</span>
+    <a href="../projects.html">Projects</a>
+    <span>›</span>
+    <span>Banking Transactions & Fraud Pattern Detection</span>
+  </div>
+</div>
+
+<div class="project-header">
+  <div class="container">
+    <div class="project-meta-row">
+      <span class="meta-badge">🗄️ DA-3: MySQL</span>
+      <span class="meta-badge">🏦 Banking & Finance</span>
+      <span class="meta-badge">⚡ Intermediate</span>
+      <span class="meta-badge">⏱ 10–14 hrs</span>
+    </div>
+    <h1>Banking Transactions & Fraud Pattern Detection</h1>
+    <div class="project-meta-row" style="margin-top:16px;">
+      <span class="meta-badge">🗄️ MySQL</span>
+      <span class="meta-badge">✓ Real-World Data</span>
+    </div>
+  </div>
+</div>
+
+<div class="project-body">
+
+  <div class="project-section">
+    <h2>Business Challenge</h2>
+    
+    <p>You have been engaged as a data analyst by a bank's fraud monitoring team. They suspect certain transaction patterns are associated with fraudulent activity, but no one has systematically queried the transaction database to confirm which patterns actually matter.</p>
+    <p>Your task is to analyse a financial transactions database using SQL to identify suspicious patterns, segment customer risk profiles, and support the fraud monitoring team's rule-setting process.</p>
+    
+  </div>
+
+  <div class="project-section">
+    <h2>Background</h2>
+    
+    <p>Fraud detection at scale depends on being able to isolate rare events (fraudulent transactions are typically a tiny fraction of all transactions) using precise, well-constructed queries — subqueries, window functions, and careful aggregation are essential here, not just basic filtering.</p>
+    <p>This project simulates the kind of exploratory SQL analysis a data analyst would do to support a bank's fraud monitoring or risk team before any machine learning model is built.</p>
+    
+  </div>
+
+  <div class="project-section">
+    <h2>Project Objective</h2>
+    <p>Analyse a financial transactions database to identify suspicious patterns, segment customer risk profiles using SQL, and support a fraud monitoring team's detection rules.</p>
+  </div>
+
+  <div class="project-section">
+    <h2>Learning Objectives</h2>
+    <p>By completing this project you will demonstrate the ability to:</p>
+    <ul>
+      <li>Query a large transactional dataset using advanced SQL techniques</li>
+      <li>Use subqueries to isolate anomalous transactions relative to a customer's typical behaviour</li>
+      <li>Apply window functions to calculate rolling and ranked transaction metrics</li>
+      <li>Use aggregation to build customer-level risk profiles</li>
+      <li>Communicate fraud pattern findings clearly to a risk management audience</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Dataset Information</h2>
+    <div class="dataset-box">
+      <table>
+        <tr><td>Dataset Name</td><td>Credit Card Fraud Detection Dataset</td></tr>
+        <tr><td>Publisher</td><td>Kaggle (ULB Machine Learning Group)</td></tr>
+        <tr><td>Description</td><td>Anonymised credit card transactions with a binary fraud label, including transaction amount, time, and PCA-transformed features</td></tr>
+        <tr><td>File Format</td><td>CSV (import into MySQL as a single transactions table)</td></tr>
+        <tr><td>Approximate Size</td><td>~150MB</td></tr>
+        <tr><td>Licence</td><td>Public — Open Database License (ODbL) (check Kaggle page for latest terms)</td></tr>
+        <tr><td>Download Link</td><td><a href="https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud" target="_blank">kaggle.com — Credit Card Fraud Detection ↗</a></td></tr>
+        <tr><td>Access</td><td>Free Kaggle account required. Click 'Download' on the dataset page, then import into MySQL.</td></tr>
+        <tr><td>Known Limitations</td><td>Transaction features are PCA-transformed for privacy, so you won't be able to interpret individual features by name — focus your analysis on amount, time, and the fraud label rather than trying to interpret the anonymised features.</td></tr>
+        <tr><td>Last Verified</td><td>July 2026</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Project Tasks</h2>
+
+    <h3>Stage 1 — Schema Design &amp; Data Import</h3>
+    <ul>
+      <li>Import the transactions CSV into MySQL and set appropriate data types and indexes (especially on the time and fraud label columns)</li>
+      <li>Audit for duplicate transaction records and class imbalance between fraud and non-fraud cases</li>
+      <li>Document the class imbalance and how it affects the interpretation of any aggregate statistics</li>
+    </ul>
+
+    <h3>Stage 2 — Query Development</h3>
+    <ul>
+      <li>Write queries to answer these business questions:
+        <ul style="margin-top:8px; padding-left:20px;">
+          <li>How does the distribution of transaction amount differ between fraudulent and legitimate transactions?</li>
+          <li>Are fraudulent transactions concentrated at particular times (e.g. specific hours)?</li>
+          <li>What proportion of high-value transactions (above a defined threshold) are fraudulent, compared to the overall fraud rate?</li>
+          <li>Using a window function, how does each transaction's amount compare to a rolling average of recent transactions?</li>
+        </ul>
+      </li>
+      <li>Save all queries as documented .sql scripts with inline comments explaining the logic</li>
+    </ul>
+
+    <h3>Stage 3 — Insights &amp; Reporting</h3>
+    <ul>
+      <li>Summarise your query results into a findings table covering the four business questions</li>
+      <li>Propose 2–3 rule-of-thumb detection signals the fraud team could monitor based on your findings</li>
+      <li>Write a short summary explaining the practical value and limitations of a rules-based approach</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Expected Deliverables</h2>
+    <ul>
+      <li>MySQL schema/import script (schema.sql) with comments</li>
+      <li>MySQL analysis queries (analysis.sql), each commented and mapped to a business question</li>
+      <li>Detection signal recommendations (1 page)</li>
+      <li>GitHub repository with all scripts and a completed README</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Assessment Rubric</h2>
+    <table class="rubric-table">
+      <thead><tr><th>Criterion</th><th>What Good Looks Like</th><th>Weight</th></tr></thead>
+      <tbody>
+        <tr><td>Data Import & Indexing</td><td>Table correctly imported with appropriate indexes for query performance</td><td>10%</td></tr>
+        <tr><td>Query Accuracy</td><td>Queries correctly use subqueries and window functions to isolate patterns</td><td>30%</td></tr>
+        <tr><td>Code Quality</td><td>Queries are clearly formatted and commented</td><td>15%</td></tr>
+        <tr><td>Statistical Reasoning</td><td>Correctly accounts for class imbalance when interpreting results</td><td>20%</td></tr>
+        <tr><td>Insight Quality</td><td>Findings are specific and translate into plausible detection signals</td><td>15%</td></tr>
+        <tr><td>Documentation</td><td>README is complete and repository is well-organised</td><td>10%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="project-section">
+    <h2>Stretch Challenge</h2>
+    <div class="stretch-box">
+      <p><strong>For learners who want to go further:</strong></p>
+      <ul>
+      <li>Use a CTE to build a reusable rolling-average view, then query it for multiple threshold scenarios</li>
+      <li>Calculate a simple composite risk score per transaction combining amount, time, and rolling deviation</li>
+      <li>Write a reflection on why a rules-based SQL approach has limits compared to a trained fraud detection model</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Responsible AI Guidance</h2>
+    <div class="ai-box">
+      <p><strong>You may use AI to:</strong> explain SQL concepts, debug query syntax errors, check your writing clarity, and brainstorm analytical questions.</p>
+      <p style="margin-top:8px;"><strong>You may not use AI to:</strong> generate your queries end-to-end, write your analysis, or produce your report for you. Your query logic and interpretations must be your own.</p>
+      <p style="margin-top:8px;">If you use AI assistance significantly at any stage, note it briefly in your README. Employers value honesty about tooling — what matters is that the thinking and judgement are yours.</p>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Reflection Questions</h2>
+    <div class="reflection-box">
+      <p>Include written answers to at least three of these in your README or a separate reflection document:</p>
+      <ul>
+      <li>How did the severe class imbalance in this dataset affect how you interpreted your aggregate results?</li>
+      <li>Which query was the most challenging to write correctly, and what approach did you take?</li>
+      <li>What signal did you find most promising for fraud detection, and why?</li>
+      <li>If you were presenting this to the bank's risk team, what three sentences would you lead with?</li>
+      <li>What are the limitations of a purely rules-based (non-ML) approach to fraud detection?</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>GitHub Portfolio Guidance</h2>
+    <p>Organise your repository as follows:</p>
+    <div class="code-block">banking-transactions-fraud-pattern-detection/
+├── data/
+│   └── raw/           ← link to source, not the file itself
+├── sql/
+│   ├── schema.sql
+│   └── analysis.sql
+├── images/
+│   └── query_results.png
+└── README.md</div>
+    <p style="margin-top:12px;">Your README should include: project title, business challenge, tools used, dataset source and link, key findings (3 bullet points), and screenshots or output samples of your key queries.</p>
+    <a href="../github-guide.html" class="btn btn-outline btn-sm mt-16">Full GitHub Guide →</a>
+  </div>
+
+  <div class="project-section">
+    <h2>LinkedIn Showcase Guidance</h2>
+    <p>When sharing this project on LinkedIn, use this structure:</p>
+    <ul>
+      <li><strong>Hook:</strong> Start with the business problem, not the tools ("A bank's fraud team had a hunch about which transactions looked suspicious — but no query had ever confirmed it…")</li>
+      <li><strong>What you did:</strong> Briefly describe your analytical approach in MySQL</li>
+      <li><strong>Key finding:</strong> Share one specific, concrete insight from the data</li>
+      <li><strong>Link:</strong> Include your GitHub repository link</li>
+      <li><strong>Tags:</strong> #DataAnalytics #SQL #MySQL #ALXAfrica #FraudDetection #PortfolioProject</li>
+    </ul>
+    <a href="../linkedin-guide.html" class="btn btn-outline btn-sm mt-16">Full LinkedIn Guide →</a>
+  </div>
+
+  <div style="margin-top:48px; padding-top:32px; border-top:2px solid var(--border); display:flex; gap:14px; flex-wrap:wrap;">
+    <a href="../projects.html" class="btn btn-outline">← Back to All Projects</a>
+    <a href="../projects.html?course=DA-3" class="btn btn-dark">More MySQL Projects</a>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo-text">ALX Data Portfolio Hub</div>
+      <p>Real-world portfolio projects for ALX Data Analytics learners.</p>
+    </div>
+    <div class="footer-col"><h5>Projects</h5><ul>
+      <li><a href="../projects.html?course=DA-2">Google Sheets</a></li>
+      <li><a href="../projects.html?course=DA-3">MySQL</a></li>
+      <li><a href="../projects.html?course=DA-4">Power BI</a></li>
+      <li><a href="../projects.html?course=Capstone">Capstone</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Guides</h5><ul>
+      <li><a href="../how-it-works.html">How It Works</a></li>
+      <li><a href="../responsible-ai.html">Responsible AI</a></li>
+      <li><a href="../github-guide.html">GitHub Guide</a></li>
+      <li><a href="../linkedin-guide.html">LinkedIn Guide</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Info</h5><ul>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../feedback.html">Feedback</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 ALX Data Programs — Technical Mentorship. Pilot prototype.</span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
