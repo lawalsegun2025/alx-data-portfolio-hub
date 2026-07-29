@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Retail Analytics: From Raw Data to Executive Insights — ALX Data Portfolio Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <span class="nav-logo-badge">ALX</span>
+      <span class="nav-logo-text">Data Portfolio Hub</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../projects.html" class="active">Explore Projects</a></li>
+      <li><a href="../how-it-works.html">How It Works</a></li>
+      <li><a href="../github-guide.html">GitHub Guide</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../projects.html" class="nav-cta">Browse Projects →</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="../index.html">Home</a>
+    <span>›</span>
+    <a href="../projects.html">Projects</a>
+    <span>›</span>
+    <span>Retail Analytics: From Raw Data to Executive Insights</span>
+  </div>
+</div>
+
+<div class="project-header">
+  <div class="container">
+    <div class="project-meta-row">
+      <span class="meta-badge">🏆 Data Analytics Capstone</span>
+      <span class="meta-badge">🛒 Retail & E-commerce</span>
+      <span class="meta-badge">⚡ Advanced</span>
+      <span class="meta-badge">⏱ 20–30 hrs</span>
+    </div>
+    <h1>Retail Analytics: From Raw Data to Executive Insights</h1>
+    <div class="project-meta-row" style="margin-top:16px;">
+      <span class="meta-badge">📊 Google Sheets</span>
+      <span class="meta-badge">🗄️ MySQL</span>
+      <span class="meta-badge">📈 Power BI</span>
+      <span class="meta-badge">✓ Real-World Data</span>
+    </div>
+  </div>
+</div>
+
+<div class="project-body">
+
+  <div class="project-section">
+    <h2>Business Challenge</h2>
+    
+    <p>You have been engaged as a data analyst consultant by a Brazilian e-commerce marketplace operator. Leadership has years of order data sitting in a raw export but no consolidated view of what's actually driving revenue, which categories are underperforming, or how satisfaction relates to repeat business.</p>
+    <p>Your task is to take this raw transactional data through a full analytics pipeline — clean it, query it, and present it — and deliver a set of executive recommendations leadership can act on.</p>
+    
+  </div>
+
+  <div class="project-section">
+    <h2>Background</h2>
+    
+    <p>E-commerce marketplaces generate rich, relational data, but turning that raw export into an executive-ready insight package requires the full analytics pipeline: cleaning in a spreadsheet, structured querying in SQL, and a well-modelled dashboard in Power BI. Each stage catches different problems and adds different value.</p>
+    <p>This project simulates the kind of end-to-end analytics engagement a data analyst would be asked to deliver for a retail or marketplace operator's leadership team.</p>
+    
+  </div>
+
+  <div class="project-section">
+    <h2>Project Objective</h2>
+    <p>Deliver a complete analytics package — from raw data to executive insight — that enables a retail marketplace's leadership team to make evidence-based decisions about category investment and customer experience.</p>
+  </div>
+
+  <div class="project-section">
+    <h2>Learning Objectives</h2>
+    <p>By completing this project you will demonstrate the ability to:</p>
+    <ul>
+      <li>Clean and prepare messy real-world e-commerce data using Google Sheets</li>
+      <li>Design and query a relational orders database using MySQL</li>
+      <li>Build an executive-level Power BI dashboard from a modelled data source</li>
+      <li>Write DAX measures for KPIs including revenue by category, average order value, and repeat purchase rate</li>
+      <li>Interpret findings in the context of a realistic retail business problem</li>
+      <li>Communicate actionable recommendations to a non-technical leadership audience</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Dataset Information</h2>
+    <div class="dataset-box">
+      <table>
+        <tr><td>Dataset Name</td><td>Brazilian E-commerce Public Dataset by Olist</td></tr>
+        <tr><td>Publisher</td><td>Kaggle (Olist)</td></tr>
+        <tr><td>Description</td><td>Real commercial orders from a Brazilian marketplace, including orders, order items, products, customers, sellers, and reviews across multiple related tables</td></tr>
+        <tr><td>File Format</td><td>CSV (multiple related files)</td></tr>
+        <tr><td>Approximate Size</td><td>~100MB across all files</td></tr>
+        <tr><td>Licence</td><td>Public — CC BY-NC-SA 4.0 (check Kaggle page for latest terms)</td></tr>
+        <tr><td>Download Link</td><td><a href="https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce" target="_blank">kaggle.com — Brazilian E-commerce (Olist) ↗</a></td></tr>
+        <tr><td>Access</td><td>Free Kaggle account required. Click 'Download' on the dataset page to get all related CSV files.</td></tr>
+        <tr><td>Known Limitations</td><td>Dataset is based on a Brazilian marketplace. Treat it as representative data for an e-commerce operator generally — focus on the analytical process, not the geography.</td></tr>
+        <tr><td>Last Verified</td><td>July 2026</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Project Tasks</h2>
+
+    <h3>Phase 1 — Data Preparation (Google Sheets)</h3>
+    <ul>
+      <li>Import the raw order, item, product, and customer exports and audit for missing values, duplicates, and inconsistent category naming</li>
+      <li>Standardise date formats, product category names, and order status categories</li>
+      <li>Document every cleaning decision and the reason for it in a separate log tab</li>
+      <li>Calculate derived columns: order value, delivery time (days), review score buckets</li>
+      <li>Export cleaned, analysis-ready CSVs for import into MySQL</li>
+    </ul>
+
+    <h3>Phase 2 — SQL Analysis (MySQL)</h3>
+    <ul>
+      <li>Write queries to answer these business questions:
+        <ul style="margin-top:8px; padding-left:20px;">
+          <li>Which product categories generate the highest total revenue, and which have the highest average order value?</li>
+          <li>What is the relationship between delivery time and review score?</li>
+          <li>Which regions show the strongest revenue growth, and which are underperforming?</li>
+          <li>What share of revenue comes from repeat customers versus one-time buyers?</li>
+        </ul>
+      </li>
+      <li>Save all queries as documented .sql scripts with inline comments</li>
+    </ul>
+
+    <h3>Phase 3 — Power BI Dashboard</h3>
+    <ul>
+      <li>Import cleaned data and build a star-schema data model</li>
+      <li>Create DAX measures for: total revenue, average order value, delivery time, and repeat purchase rate</li>
+      <li>Design a three-page executive dashboard:
+        <ul style="margin-top:8px; padding-left:20px;">
+          <li>Page 1: Network overview KPIs and category comparison</li>
+          <li>Page 2: Regional performance drilldown</li>
+          <li>Page 3: Customer behaviour and satisfaction trends</li>
+        </ul>
+      </li>
+      <li>Apply consistent ALX-inspired colours and clear data labels throughout</li>
+    </ul>
+
+    <h3>Phase 4 — Recommendations Report</h3>
+    <ul>
+      <li>Write a 1–2 page executive summary identifying the three most critical findings</li>
+      <li>Propose at least two evidence-based recommendations the relevant stakeholders can action</li>
+      <li>Acknowledge the limitations of your analysis and the data</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Expected Deliverables</h2>
+    <ul>
+      <li>Google Sheets workbook: raw data tab, cleaning log tab, and cleaned data tab</li>
+      <li>MySQL scripts: schema creation (.sql) and all analysis queries (.sql), each commented</li>
+      <li>Power BI report file (.pbix) — three-page executive dashboard</li>
+      <li>Executive summary (PDF or Word, 1–2 pages)</li>
+      <li>GitHub repository with all files organised and a completed README</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Assessment Rubric</h2>
+    <table class="rubric-table">
+      <thead><tr><th>Criterion</th><th>What Good Looks Like</th><th>Weight</th></tr></thead>
+      <tbody>
+        <tr><td>Data Preparation</td><td>All issues identified, cleaning decisions documented, derived columns correct</td><td>20%</td></tr>
+        <tr><td>SQL Accuracy</td><td>Queries return correct results, use appropriate joins/aggregations, are clearly commented</td><td>20%</td></tr>
+        <tr><td>Data Modelling</td><td>Star schema is correct, relationships are well-defined, no circular dependencies</td><td>10%</td></tr>
+        <tr><td>DAX Measures</td><td>Measures return accurate values, are named clearly, and are correctly used in visuals</td><td>15%</td></tr>
+        <tr><td>Dashboard Design</td><td>Clear hierarchy, correct chart types, consistent formatting, usable on a 13" screen</td><td>15%</td></tr>
+        <tr><td>Insight Quality</td><td>Findings are specific, evidence-based, and non-obvious</td><td>10%</td></tr>
+        <tr><td>Recommendations</td><td>Actionable, grounded in the data, acknowledge limitations</td><td>5%</td></tr>
+        <tr><td>Documentation</td><td>README is complete, repository is well-organised, all sources are cited</td><td>5%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="project-section">
+    <h2>Stretch Challenge</h2>
+    <div class="stretch-box">
+      <p><strong>For learners who want to go further:</strong></p>
+      <ul>
+      <li>Add a forecasting visual in Power BI projecting revenue for the next 6 months using the built-in analytics pane</li>
+      <li>Segment customers into value tiers (low/medium/high lifetime value) using SQL and visualise the distribution</li>
+      <li>Build a drill-through page in Power BI enabling leadership to inspect any single category's performance in detail</li>
+      <li>Write a reflection on what additional data would improve the quality of your recommendations and why</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Responsible AI Guidance</h2>
+    <div class="ai-box">
+      <p><strong>You may use AI to:</strong> explain concepts, debug SQL queries or DAX formulas, check your writing clarity, and brainstorm analytical questions.</p>
+      <p style="margin-top:8px;"><strong>You may not use AI to:</strong> generate the analysis, write your recommendations, or produce the executive summary for you. Your interpretations and conclusions must be your own.</p>
+      <p style="margin-top:8px;">If you use AI assistance significantly at any stage, note it briefly in your README. Employers value honesty about tooling — what matters is that the thinking and judgement are yours.</p>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Reflection Questions</h2>
+    <div class="reflection-box">
+      <p>Include written answers to at least three of these in your README or a separate reflection document:</p>
+      <ul>
+      <li>What was the most significant data quality issue you encountered, and how did you resolve it?</li>
+      <li>Which SQL query was most challenging to write? What approach did you take?</li>
+      <li>What story does your dashboard tell that a table of numbers would not?</li>
+      <li>If you were presenting this to the marketplace's CEO, what three sentences would you lead with?</li>
+      <li>What limitations of this dataset most affected the quality of your recommendations?</li>
+      <li>What would you do differently if you were to repeat this project?</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>GitHub Portfolio Guidance</h2>
+    <p>Organise your repository as follows:</p>
+    <div class="code-block">retail-analytics-capstone/
+├── data/
+│   ├── raw/           ← link to source, not the file itself
+│   └── cleaned/       ← your cleaned CSV
+├── sql/
+│   ├── schema.sql
+│   └── analysis.sql
+├── powerbi/
+│   └── retail-analytics-capstone.pbix
+├── reports/
+│   └── executive_summary.pdf
+├── images/
+│   └── dashboard_screenshot.png
+└── README.md</div>
+    <p style="margin-top:12px;">Your README should include: project title, business challenge, tools used, dataset source and link, key findings (3 bullet points), and a screenshot of the dashboard.</p>
+    <a href="../github-guide.html" class="btn btn-outline btn-sm mt-16">Full GitHub Guide →</a>
+  </div>
+
+  <div class="project-section">
+    <h2>LinkedIn Showcase Guidance</h2>
+    <p>When sharing this project on LinkedIn, use this structure:</p>
+    <ul>
+      <li><strong>Hook:</strong> Start with the business problem, not the tools ("A marketplace operator had years of order data — and no clear answer to where its revenue was actually coming from…")</li>
+      <li><strong>What you did:</strong> Briefly describe your analytical approach across all three tools</li>
+      <li><strong>Key finding:</strong> Share one specific, concrete insight from the data</li>
+      <li><strong>Link:</strong> Include your GitHub repository link</li>
+      <li><strong>Tags:</strong> #DataAnalytics #SQL #PowerBI #ALXAfrica #Ecommerce #PortfolioProject</li>
+    </ul>
+    <a href="../linkedin-guide.html" class="btn btn-outline btn-sm mt-16">Full LinkedIn Guide →</a>
+  </div>
+
+  <div style="margin-top:48px; padding-top:32px; border-top:2px solid var(--border); display:flex; gap:14px; flex-wrap:wrap;">
+    <a href="../projects.html" class="btn btn-outline">← Back to All Projects</a>
+    <a href="../projects.html?course=Capstone" class="btn btn-dark">More Capstone Projects</a>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo-text">ALX Data Portfolio Hub</div>
+      <p>Real-world portfolio projects for ALX Data Analytics learners.</p>
+    </div>
+    <div class="footer-col"><h5>Projects</h5><ul>
+      <li><a href="../projects.html?course=DA-2">Google Sheets</a></li>
+      <li><a href="../projects.html?course=DA-3">MySQL</a></li>
+      <li><a href="../projects.html?course=DA-4">Power BI</a></li>
+      <li><a href="../projects.html?course=Capstone">Capstone</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Guides</h5><ul>
+      <li><a href="../how-it-works.html">How It Works</a></li>
+      <li><a href="../responsible-ai.html">Responsible AI</a></li>
+      <li><a href="../github-guide.html">GitHub Guide</a></li>
+      <li><a href="../linkedin-guide.html">LinkedIn Guide</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Info</h5><ul>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../feedback.html">Feedback</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 ALX Data Programs — Technical Mentorship. Pilot prototype.</span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
